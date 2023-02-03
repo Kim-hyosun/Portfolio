@@ -103,6 +103,7 @@ h4 {
 body {
   background-color: #FAE8E1;
   overflow-x: hidden;
+  cursor: none;
 }
 body .wrap {
   position: relative;
@@ -119,7 +120,7 @@ body .wrap header {
   margin: 8px auto;
   position: sticky;
   top: 20px;
-  z-index: 999;
+  z-index: 99;
 }
 body .wrap header .logo a {
   text-indent: -9999px;
@@ -302,16 +303,16 @@ body .wrap .bg2 {
   display: grid;
   grid-template-columns: repeat(3, 22vw);
   grid-template-rows: repeat(17, 2.7vw);
-  row-gap: 40px;
-  column-gap: 25px;
+  row-gap: 50px;
+  column-gap: 30px;
   position: relative;
   top: -6vw;
   left: 6vw;
-  z-index: 99;
+  z-index: 9;
 }
 @media only screen and (min-width: 1200px) and (max-width: 1300px) {
   .wrap main .work .wrap {
-    grid-template-rows: repeat(17, 2.5vw);
+    grid-template-rows: repeat(17, 2vw);
   }
 }
 @media only screen and (min-width: 1100px) and (max-width: 1200px) {
@@ -781,12 +782,12 @@ body .wrap .bg2 {
 }
 
 .wrap main .contact {
-  margin-top: 24vw;
-  width: 60vw;
   position: relative;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 99;
+  z-index: 9;
+  margin-top: 24vw;
+  width: 60vw;
 }
 @media only screen and (min-width: 1600px) and (max-width: 1800px) {
   .wrap main .contact {
@@ -985,9 +986,13 @@ body .wrap .bg2 {
     display: none;
   }
 }
-.wrap main .contact .border .kakao img {
+.wrap main .contact .border .kakao a {
   max-width: 250px;
   max-height: 250px;
+}
+.wrap main .contact .border .kakao a img {
+  width: 100%;
+  height: 100%;
 }
 .wrap main .contact .border .kakao figcaption {
   font-size: 24px;
@@ -1051,7 +1056,7 @@ body .wrap .bg2 {
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 9999;
+  z-index: 999;
 }
 .wrap .menuPage .topline {
   width: 90vw;
@@ -1163,7 +1168,7 @@ body.dark .wrap footer ul li a:hover {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 99999;
+  z-index: 9999;
   pointer-events: none;
   opacity: 0;
   transform: translate(-50%);
