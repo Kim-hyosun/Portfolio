@@ -1,0 +1,111 @@
+@charset "utf-8";
+
+/* DMSerifDisplay */
+@font-face {
+	font-family: "DMSerifDisplay";
+	src: url("../font/DMSerifDisplay-Italic.woff") format("woff"),
+		url("../font/DMSerifDisplay-Italic.woff2") format("woff2");
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "DMSerifDisplay";
+	src: url("../font/DMSerifDisplay-Regular.woff") format("woff"),
+		url("../font/DMSerifDisplay-Regular.woff2") format("woff2");
+	font-style: normal;
+	font-display: swap;
+}
+
+/* Hanuman 100, 300, 400, 700*/
+@font-face {
+	font-family: "Hanuman";
+	src: url("../font/Hanuman-Bold.woff") format("woff"),
+		url("../font/Hanuman-Bold.woff2") format("woff2");
+	font-style: normal;
+	font-weight: 700;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Hanuman";
+	src: url("../font/Hanuman-Regular.woff") format("woff"),
+		url("../font/Hanuman-Regular.woff2") format("woff2");
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Hanuman";
+	src: url("../font/Hanuman-Light.woff") format("woff"),
+		url("../font/Hanuman-Light.woff2") format("woff2");
+	font-style: normal;
+	font-weight: 300;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Hanuman";
+	src: url("../font/Hanuman-Thin.woff") format("woff"),
+		url("../font/Hanuman-Thin.woff2") format("woff2");
+	font-style: normal;
+	font-weight: 100;
+	font-display: swap;
+}
+
+/* NotoSans  400, 500, 600*/
+@font-face {
+	font-family: "NotoSans";
+	src: url("../font/NotoSans-Regular.woff") format("woff"),
+		url("../font/NotoSans-Regular.woff2") format("woff2");
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "NotoSans";
+	src: url("../font/NotoSans-Medium.woff") format("woff"),
+		url("../font/NotoSans-Medium.woff2") format("woff2");
+	font-style: normal;
+	font-weight: 500;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "NotoSans";
+	src: url("../font/NotoSans-MediumItalic.woff") format("woff"),
+		url("../font/NotoSans-MediumItalic.woff2") format("woff2");
+	font-style: italic;
+	font-weight: 500;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "NotoSans";
+	src: url("../font/NotoSans-SemiBold.woff") format("woff"),
+		url("../font/NotoSans-SemiBold.woff2") format("woff2");
+	font-style: normal;
+	font-weight: 600;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "NotoSans";
+	src: url("../font/NotoSans-SemiBoldItalic.woff") format("woff"),
+		url("../font/NotoSans-SemiBoldItalic.woff2") format("woff2");
+	font-style: italic;
+	font-weight: 600;
+	font-display: swap;
+}
+
+
+/* PretendardVariable */
+@font-face {
+  font-family: 'Pretendard';
+  src: url(../font/PretendardVariable.woff2) format('woff2-variations');
+  font-weight: 45 920;
+  font-style: normal;
+  font-display: swap;
+}

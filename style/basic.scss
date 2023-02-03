@@ -1,0 +1,1271 @@
+$bgColor: #FAE8E1;
+
+$mobileSize : 320px;
+$tabletSize : 768px;
+$pcSize : 1024px;
+
+/* 796px까지 대응되는 중... */
+// mediaquery 
+@mixin responsiveWEB ($media) {
+  @if $media ==mob {
+
+    // mobile
+    @media only screen and (max-width: $mobileSize) {
+      @content;
+    }
+  }
+
+  @else if $media ==mobtb {
+
+    // mobile~tablet
+    @media only screen and (max-width: 767px) {
+      @content;
+    }
+  }
+
+  @else if $media ==tab2 {
+
+    // 768~820
+    @media only screen and (min-width: $tabletSize) and (max-width: 820px) {
+      @content;
+    }
+  }
+
+  @else if $media ==tab1 {
+
+    // 768~928
+    @media only screen and (min-width: $tabletSize) and (max-width: 928px) {
+      @content;
+    }
+  }
+
+  @else if $media ==tab {
+
+    // 768~1023
+    @media only screen and (min-width: $tabletSize) and (max-width: 1023px) {
+      @content;
+    }
+  }
+  @else if $media ==tabpc4 {
+
+    // 1024~1200
+    @media only screen and (min-width: 1000px) and (max-width: 1100px) {
+      @content;
+    }
+  }
+
+  @else if $media ==tabpc3 {
+
+    // 1024~1200
+    @media only screen and (min-width: 1100px) and (max-width: 1200px) {
+      @content;
+    }
+  }
+
+  @else if $media ==tabpc2 {
+
+    // 1200~1300
+    @media only screen and (min-width: 1200px) and (max-width: 1300px) {
+      @content;
+    }
+  }
+
+  @else if $media ==tabpc1 {
+
+    // 1300~1400
+    @media only screen and (min-width: 1300px) and (max-width: 1400px) {
+      @content;
+    }
+  }
+
+  @else if $media ==tabpc {
+
+    // 1400~1600
+    @media only screen and (min-width: 1400px) and (max-width: 1600px) {
+      @content;
+    }
+  }
+
+  @else if $media ==pc2 {
+
+    // 1600~1800
+    @media only screen and (min-width: 1600px) and (max-width: 1800px) {
+      @content;
+    }
+  }
+
+  @else if $media ==full {
+
+    // 300~1600
+    @media only screen and (min-width: 300px) and (max-width: 1600px) {
+      @content;
+    }
+  }
+
+  @else if $media ==pc {
+
+    // pc 1600~1920
+    @media only screen and (min-width: 1600px) {
+      @content;
+    }
+  }
+
+  @else if $media ==header {
+
+    // ~1024px
+    @media only screen and (max-width: $pcSize) {
+      @content;
+    }
+  }
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 30px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+body * {
+  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, "Malgun Gothic", "맑은 고딕", helvetica, "Apple SD Gothic Neo", sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  display: block;
+}
+
+img {
+  display: block;
+}
+
+.title {
+  font-family: 'DMSerifDisplay', sans-serif;
+}
+
+.font {
+  font-family: 'Hanuman', sans-serif;
+}
+
+h3 {
+  font-size: 100px;
+
+  @include responsiveWEB(full) {
+    font-size: 80px;
+  }
+
+  @include responsiveWEB(tab) {
+    font-size: 60px;
+  }
+
+  @include responsiveWEB(tab) {
+    font-size: 50px;
+  }
+
+  @include responsiveWEB(mobtb) {
+    font-size: 50px;
+  }
+
+}
+
+h4 {
+  font-size: 60px;
+  font-style: italic;
+  font-family: 'NotoSans', sans-serif;
+
+  @include responsiveWEB(tabpc) {
+    font-size: 50px;
+  }
+
+  @include responsiveWEB(tabpc1) {
+    font-size: 44px;
+  }
+
+  @include responsiveWEB(tabpc2) {
+    font-size: 40px;
+  }
+
+  @include responsiveWEB(tabpc3) {
+    font-size: 30px;
+  }
+
+  @include responsiveWEB(tab) {
+    font-size: 30px;
+  }
+
+  @include responsiveWEB(tab2) {
+    font-size: 24px;
+  }
+
+  @include responsiveWEB(mobtb) {
+    font-size: 24px;
+  }
+
+
+
+}
+
+
+body {
+  background-color: $bgColor;
+  overflow-x: hidden;
+
+
+  .wrap {
+    position: relative;
+
+    header {
+      display: flex;
+      align-items: center;
+      width: 90vw;
+      margin: 8px auto;
+      position: sticky;
+      top: 20px;
+      z-index: 999;
+
+      h1 a {
+        text-indent: -9999px;
+        width: 219px;
+        height: 57px;
+        background: url('../images/logo.png') no-repeat 0 /contain;
+
+        @include responsiveWEB(header) {
+          width: 132px;
+          height: 38px;
+          background: url('../images/logo_resize.png') no-repeat 0 /contain;
+        }
+      }
+
+      .icons {
+        margin-left: auto;
+        display: flex;
+        text-indent: -9999px;
+        align-items: center;
+        gap: 20px;
+
+        a {
+          padding: 0 6px 0;
+        }
+
+        .darkBtn {
+          width: 51px;
+          height: 48px;
+          background: url('../images/icon_dark.png') no-repeat 50% /cover;
+
+        }
+
+        .lightBtn {
+          width: 60px;
+          height: 27px;
+          background: url('../images/icon_light.png') no-repeat 50% /cover;
+          display: none;
+        }
+
+        .menuBtn {
+          width: 37px;
+          height: 30px;
+          background: url('../images/icon_menu_dark.png') no-repeat 50% /cover;
+
+          @include responsiveWEB(header) {
+            width: 25px;
+            height: 19px;
+            background: url('../images/icon_menu_resize.png') no-repeat 0 /contain;
+          }
+        }
+      }
+
+    }
+
+    .bg1 {
+      width: 100%;
+      position: absolute;
+      top: 17.8vw;
+
+      @include responsiveWEB(tabpc) {
+        top: 22vw;
+      }
+
+      @include responsiveWEB(tabpc1) {
+        top: 27vw;
+      }
+
+      @include responsiveWEB(tabpc2) {
+        top: 32vw;
+      }
+
+      @include responsiveWEB(tabpc3) {
+        top: 36vw;
+      }
+
+      @include responsiveWEB(tab) {
+        top: 12vw;
+      }
+      @include responsiveWEB(tab1) {
+        top: 10vw;
+      }
+      @include responsiveWEB(tab2) {
+        top: 24vw;
+      }
+      @include responsiveWEB(mobtb) {
+        top: 30vw;
+      }
+    }
+    .bg2 {
+      width:88vw; margin:0 auto;
+      position: absolute;
+      top:312vw;
+    }
+    .bg3 {
+      width:74vw; margin:0 auto;
+      position: absolute;
+      bottom:13.6vw; right:5.8vw;
+    }
+  }
+
+}
+
+.wrap {
+  main {
+    
+    h2 {
+      width: 90vw;
+      margin: 790px auto 0;
+      font-size: 120px;
+
+      @include responsiveWEB(full) {
+        font-size: 90px;
+        margin: 660px auto 0;
+      }
+
+      @include responsiveWEB(pc2) {
+        font-size: 120px;
+        margin: 760px auto 0;
+      }
+
+      @include responsiveWEB(tabpc) {
+        font-size: 100px;
+        margin: 700px auto 0;
+      }
+
+      @include responsiveWEB(tabpc3) {
+        font-size: 88px;
+        margin: 600px auto 0;
+      }
+
+      @include responsiveWEB(tab) {
+        font-size: 70px;
+        margin: 560px auto 0;
+      }
+
+      @include responsiveWEB(mobtb) {
+        font-size: 60px;
+        margin: 300px auto 0;
+      }
+
+
+
+
+
+
+    }
+
+    .work {
+      margin: 70vw 0 0 10vw;
+
+      @include responsiveWEB(pc2) {
+        margin: 64vw 0 0 10vw;
+      }
+
+      @include responsiveWEB(tabpc) {
+        margin: 63vw 0 0 10vw;
+      }
+
+      @include responsiveWEB(tabpc1) {
+        margin: 64vw 0 0 10vw;
+      }
+
+      @include responsiveWEB(tabpc2) {
+        margin: 60vw 0 0 10vw;
+      }
+
+      @include responsiveWEB(tabpc3) {
+        margin: 60vw 0 0 10vw;
+      }
+
+      @include responsiveWEB(tab) {
+        margin: 68vw 0 0 10vw;
+      }
+
+      @include responsiveWEB(mobtb) {
+        margin: 60vw 0 0 10vw;
+      }
+
+      .wrap {
+        display: grid;
+        grid-template-columns: repeat(3, 22vw);
+        grid-template-rows: repeat(17, 3vw);
+        row-gap: 40px;
+        column-gap: 25px;
+        position: relative;
+        top: -6vw;
+        left: 6vw;
+        z-index: 99;
+
+        @include responsiveWEB(tabpc2) {
+          grid-template-rows: repeat(17, 2.5vw);
+        }
+
+        @include responsiveWEB(tabpc3) {
+          grid-template-rows: repeat(17, 2vw);
+        }
+
+        @include responsiveWEB(tab) {
+          grid-template-rows: repeat(17, 1.6vw);
+        }
+
+        @include responsiveWEB(tab1) {
+          grid-template-rows: repeat(17, 1vw);
+        }
+
+        @include responsiveWEB(tab2) {
+          grid-template-rows: repeat(17, 0.4vw);
+        }
+
+        @include responsiveWEB(tab3) {
+          grid-template-rows: repeat(17, 0.3vw);
+        }
+
+        @include responsiveWEB(mobtb) {
+          grid-template-rows: repeat(17, 0.3vw);
+        }
+
+        .item {
+          background-color: #ddd;
+
+          &:nth-child(1) {
+            grid-row: 3/10;
+          }
+
+          &:nth-child(2) {
+            grid-row: 2/9;
+          }
+
+          &:nth-child(3) {
+            grid-row: 1/8;
+          }
+
+          &:nth-child(4) {
+            grid-row: 10/17;
+          }
+
+          &:nth-child(5) {
+            grid-row: 9/16;
+          }
+
+          &:nth-child(6) {
+            grid-row: 8/15;
+          }
+        }
+
+      }
+    }
+  }
+}
+
+.wrap {
+  main {
+    .skills {
+      margin: 12vw 0 0 10vw;
+
+      @include responsiveWEB(pc2) {
+        margin: 12vw 0 0 10vw;
+      }
+
+      @include responsiveWEB(tabpc) {
+        margin: 11vw 0 0 10vw;
+      }
+
+      @include responsiveWEB(tabpc1) {
+        margin: 9vw 0 0 10vw;
+      }
+
+      @include responsiveWEB(tabpc2) {
+        margin: 10vw 0 0 10vw;
+      }
+
+      @include responsiveWEB(tabpc3) {
+        margin: 8vw 0 0 10vw;
+      }
+
+      @include responsiveWEB(tab) {
+        margin: 12vw 0 0 10vw;
+      }
+
+      @include responsiveWEB(tab1) {
+        margin: 18vw 0 0 10vw;
+      }
+
+      @include responsiveWEB(tab2) {
+        margin: 10vw 0 0 10vw;
+      }
+
+
+      .list li {
+        display: grid;
+        width: 1300px;
+        grid-template-columns: 4fr 6fr;
+        grid-template-rows: 180px;
+        align-items: center;
+        border-bottom: 1px solid #000;
+        margin-left: 100px;
+
+        @include responsiveWEB(pc2) {
+          grid-template-rows: 160px;
+        }
+
+        @include responsiveWEB(tabpc) {
+          max-width: 1200px;
+          min-width: 1000px;
+          grid-template-rows: 140px;
+          margin-left: 80px;
+        }
+
+        @include responsiveWEB(tabpc1) {
+          max-width: 1000px;
+          min-width: 800px;
+          grid-template-rows: 140px;
+          margin-left: 80px;
+        }
+
+        @include responsiveWEB(tabpc2) {
+          max-width: 1000px;
+          min-width: 700px;
+          grid-template-rows: 140px;
+          margin-left: 60px;
+        }
+
+        @include responsiveWEB(tabpc3) {
+          max-width: 800px;
+          min-width: 700px;
+          grid-template-rows: 40px 80px;
+          grid-template-columns: 1fr;
+          padding: 10px 0;
+          margin-left: 60px;
+        }
+
+        @include responsiveWEB(tab) {
+          max-width: 760px;
+          min-width: 600px;
+          grid-template-rows: 100px;
+          padding: 10px 0;
+          margin-left: 60px;
+        }
+
+        @include responsiveWEB(tab1) {
+          max-width: 700px;
+          min-width: 500px;
+          grid-template-rows: 100px;
+          padding: 10px 0;
+          margin-left: 30px;
+        }
+
+        @include responsiveWEB(tab2) {
+          max-width: 600px;
+          min-width: 500px;
+          grid-template-rows: 40px 80px;
+          grid-template-columns: 1fr;
+          padding: 10px 0;
+          margin-left: 30px;
+        }
+
+        @include responsiveWEB(mobtb) {
+          max-width: 600px;
+          min-width: 500px;
+          grid-template-rows: 30px 100px;
+          grid-template-columns: 1fr;
+          padding: 10px 0;
+          margin-left: 30px;
+        }
+
+        &:last-child {
+          @include responsiveWEB(full) {
+            border: none;
+          }
+        }
+
+        h4 {
+          span {
+            font-size: 60px;
+            font-style: italic;
+            font-family: 'NotoSans', sans-serif;
+            display: inline-block;
+            width: 154px;
+            margin-right: 8px;
+
+            @include responsiveWEB(tabpc) {
+              font-size: 50px;
+              margin-right: 0;
+            }
+
+            @include responsiveWEB(tabpc1) {
+              font-size: 44px;
+            }
+
+            @include responsiveWEB(tabpc2) {
+              font-size: 40px;
+            }
+
+            @include responsiveWEB(tabpc3) {
+              font-size: 30px;
+            }
+
+            @include responsiveWEB(tab) {
+              font-size: 30px;
+            }
+
+            @include responsiveWEB(tab2) {
+              font-size: 24px;
+            }
+
+            @include responsiveWEB(mobtb) {
+              font-size: 30px;
+            }
+
+
+
+
+            &:nth-child(1),
+            &:nth-child(3) {
+              position: relative;
+              top: -20px;
+
+              @include responsiveWEB(full) {
+                top: 0;
+              }
+
+              @include responsiveWEB(tabpc) {
+                top: -20px;
+              }
+
+              @include responsiveWEB(tabpc1) {
+                top: -20px;
+              }
+
+              @include responsiveWEB(tabpc2) {
+                top: -20px;
+              }
+
+              @include responsiveWEB(tabpc3) {
+                top: 0;
+              }
+            }
+
+            &:nth-child(2) {
+              white-space: break-spaces;
+              line-height: 50px;
+              position: relative;
+              left: 6px;
+
+              @include responsiveWEB(tabpc) {
+                left: 0;
+                top: 40px;
+              }
+
+              @include responsiveWEB(full) {
+                left: -20px;
+                top: 38px;
+              }
+
+              @include responsiveWEB(tabpc) {
+                left: 0;
+                top: 38px;
+              }
+
+              @include responsiveWEB(tabpc2) {
+                left: 0;
+                top: 30px;
+              }
+
+              @include responsiveWEB(tabpc3) {
+                left: -30px;
+                top: 0;
+              }
+
+              @include responsiveWEB(tab) {
+                left: 0;
+                top: 0;
+              }
+
+              @include responsiveWEB(tab2) {
+                left: -30px;
+                top: 0;
+              }
+
+              @include responsiveWEB(mobtb) {
+                left: -30px;
+                top: 0;
+              }
+
+
+            }
+          }
+        }
+
+
+        .content {
+          padding: 0 0 0 30px;
+
+          p {
+            font-size: 18px;
+            font-weight: 400;
+
+            @include responsiveWEB(tabpc3) {
+              font-size: 16px;
+            }
+
+            @include responsiveWEB(tab) {
+              font-size: 14px;
+            }
+
+            @include responsiveWEB(tab2) {
+              font-size: 14px;
+            }
+
+            @include responsiveWEB(mobtb) {
+              font-size: 12px;
+            }
+
+            &:nth-child(2) {
+              margin: 12px 0;
+
+              @include responsiveWEB(tab2) {
+                margin: 8px 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.wrap {
+  main {
+    .about {
+      margin: 24vw 0 0 16vw;
+
+      @include responsiveWEB(pc2) {
+        margin: 26vw 0 0 16vw;
+      }
+
+      @include responsiveWEB(tabpc) {
+        margin: 17vw 0 0 16vw;
+      }
+
+      @include responsiveWEB(tabpc1) {
+        margin: 14vw 0 0 16vw;
+      }
+
+      @include responsiveWEB(tabpc2) {
+        margin: 18vw 0 0 16vw;
+      }
+
+      @include responsiveWEB(tabpc3) {
+        margin: 20vw 0 0 16vw;
+      }
+
+      @include responsiveWEB(tab) {
+        margin: 10vw 0 0 16vw;
+      }
+
+      @include responsiveWEB(tab2) {
+        margin: 2vw 0 0 8vw;
+      }
+
+      h5 {
+        font-size: 30px;
+        font-weight: bold;
+        margin-top: 28px;
+
+        @include responsiveWEB(tabpc) {
+          font-size: 24px;
+        }
+
+        @include responsiveWEB(tabpc1) {
+          font-size: 20px;
+        }
+
+        @include responsiveWEB(tabpc2) {
+          font-size: 20px;
+        }
+
+        @include responsiveWEB(tabpc3) {
+          font-size: 20px;
+        }
+
+        @include responsiveWEB(tab) {
+          font-size: 20px;
+        }
+
+        @include responsiveWEB(tab) {
+          font-size: 16px;
+        }
+
+        @include responsiveWEB(mobtb) {
+          font-size: 14px;
+        }
+      }
+
+      p {
+        font-size: 24px;
+        margin-top: 24px;
+        line-height: 1.4;
+
+        @include responsiveWEB(tabpc) {
+          font-size: 18px;
+        }
+
+        @include responsiveWEB(tabpc1) {
+          font-size: 18px;
+        }
+
+        @include responsiveWEB(tabpc2) {
+          font-size: 16px;
+        }
+
+        @include responsiveWEB(tabpc3) {
+          font-size: 16px;
+        }
+
+        @include responsiveWEB(tab) {
+          font-size: 16px;
+        }
+
+        @include responsiveWEB(tab2) {
+          font-size: 14px;
+        }
+
+        @include responsiveWEB(mobtb) {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
+
+.wrap {
+  main {
+    .contact {
+      margin-top: 24vw;
+      width: 60vw;
+
+      @include responsiveWEB(pc2) {
+        margin-top: 20vw;
+      }
+
+      @include responsiveWEB(tabpc) {
+        margin-top: 14vw;
+      }
+
+      @include responsiveWEB(tabpc1) {
+        margin-top: 14vw;
+      }
+
+      @include responsiveWEB(tabpc2) {
+        margin-top: 10vw;
+      }
+
+      @include responsiveWEB(tabpc3) {
+        margin-top: 22vw;
+      }
+
+      @include responsiveWEB(tab) {
+        margin-top: 6vw;
+      }
+
+      @include responsiveWEB(tab2) {
+        margin-top: 20vw;
+      }
+
+
+      position: relative;
+      left:50%;
+      transform: translateX(-50%);
+      z-index: 99;
+
+      .title {
+        text-align: right;
+      }
+
+      .border {
+        border: 2px solid #000;
+        border-radius: 30px;
+        display: flex;
+        padding: 80px 100px 60px;
+        justify-content: space-between;
+        background-color: $bgColor;
+        align-items: center;
+
+        @include responsiveWEB(pc2) {
+          padding: 60px 100px 40px;
+        }
+
+        @include responsiveWEB(full) {
+          justify-content: center;
+        }
+
+        @include responsiveWEB(tabpc) {
+          padding: 40px 100px 40px;
+        }
+
+        @include responsiveWEB(tabpc1) {
+          padding: 40px 100px 20px;
+
+        }
+
+        @include responsiveWEB(tabpc2) {
+          padding: 40px 100px 20px;
+
+        }
+
+        @include responsiveWEB(tabpc3) {
+          padding: 20px 40px 20px;
+        }
+
+        @include responsiveWEB(tab) {
+          padding: 10px 0 20px;
+        }
+
+        /* 1600~1200px 까지 */
+        .emailForm {
+          label {
+            font-size: 24px;
+
+            @include responsiveWEB(full) {
+              font-size: 20px;
+              display: block;
+            }
+
+            @include responsiveWEB(tabpc3) {
+              display: none;
+            }
+
+            @include responsiveWEB(tab) {
+              display: none;
+            }
+
+            @include responsiveWEB(mobtb) {
+              display: none;
+            }
+
+          }
+
+          input {
+            font-size: 16px;
+            padding: 8px;
+            width: 348px;
+            border: none;
+            margin: 10px 0 0 16px;
+            background-color: transparent;
+            border-bottom: 1px solid #000;
+
+            @include responsiveWEB(tabpc) {
+              font-size: 16px;
+            }
+          }
+
+          #userEmail {
+            margin-bottom: 30px;
+          }
+
+          textarea {
+            font-size: 16px;
+            padding: 8px;
+            width: 348px;
+            margin: 0 0 0 52px;
+            border-radius: 10px;
+            line-height: 1.6;
+            background-color: transparent;
+            vertical-align: top;
+
+            @include responsiveWEB(tabpc) {
+              margin: 20px 0 0 20px;
+            }
+
+            @include responsiveWEB(tabpc1) {
+              margin: 20px 0 0 20px;
+            }
+
+            @include responsiveWEB(tabpc2) {
+              margin: 20px 0 0 20px;
+            }
+
+            @include responsiveWEB(tabpc3) {
+              margin: 20px 0 0 20px;
+            }
+
+            @include responsiveWEB(tab) {
+              margin: 20px 0 0 20px;
+            }
+
+          }
+
+          button {
+            font-size: 18px;
+            margin: 20px 0 0 152px;
+            padding: 6px 18px 2px;
+            border-radius: 10px;
+            background-color: transparent;
+            border: 1px #000 solid;
+
+            @include responsiveWEB(tabpc) {
+              margin: 20px 0 0 24px;
+            }
+
+            @include responsiveWEB(tabpc1) {
+              margin: 20px 0 0 24px;
+            }
+
+            @include responsiveWEB(tabpc2) {
+              margin: 20px 0 0 24px;
+            }
+
+            @include responsiveWEB(tabpc3) {
+              margin: 20px 0 0 20px;
+            }
+
+            @include responsiveWEB(tab) {
+              margin: 20px 0 0 20px;
+            }
+          }
+        }
+
+        .kakao {
+          @include responsiveWEB(full) {
+            display: none;
+          }
+
+          img {
+            max-width: 250px;
+            max-height: 250px;
+          }
+
+          figcaption {
+            font-size: 24px;
+            margin-top: 18px;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}
+
+.wrap {
+  footer {
+    margin: 70vw 0 2vw 2vw;
+    display: flex;
+    gap: 30px;
+    font-size: 18px;
+
+    @include responsiveWEB(pc2) {
+      margin: 100vw 0 2vw 2vw;
+    }
+
+    @include responsiveWEB(tabpc) {
+      margin: 56vw 0 2vw 2vw;
+    }
+
+    @include responsiveWEB(tabpc2) {
+      margin: 58vw 0 2vw 2vw;
+    }
+
+    @include responsiveWEB(tabpc3) {
+      margin: 50vw 0 2vw 2vw;
+    }
+
+    @include responsiveWEB(tab) {
+      margin: 60vw 0 2vw 2vw;
+    }
+
+    @include responsiveWEB(tab2) {
+      margin: 20vw 0 2vw 2vw;
+    }
+
+    ul {
+      display: flex;
+      gap: 10px;
+
+      li a {
+        font-size: 18px;
+
+        &:hover {
+          color: #FFA41B;
+        }
+      }
+    }
+  }
+}
+
+.wrap {
+  .menuPage {
+    width: 100%;
+    height: 100vh;
+    background-color: #050505;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 9999;
+
+    .topline {
+      width: 90vw;
+      display: flex;
+      align-items: center;
+      margin: 20px auto;
+
+      h1 a {
+        text-indent: -9999px;
+        width: 219px;
+        height: 57px;
+        background: url('../images/logo_white.png') no-repeat 0 /contain;
+      }
+
+      .menuClose {
+        margin-left: auto;
+        padding: 10px 10px 6px;
+
+        &:hover {
+          background-color: #FFA41B;
+        }
+      }
+    }
+
+    ul {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 14%;
+
+      li a {
+        font-size: 6rem;
+        font-weight: 500;
+        color: #fff;
+
+        &:hover {
+          color: #FFD028;
+        }
+      }
+    }
+  }
+
+  .menuPage.none {
+    display: none;
+  }
+
+  .menuPage.active {
+    display: block;
+  }
+}
+
+body.dark {
+
+  $bgColor: #222;
+  background-color: $bgColor;
+
+  h2,
+  h3,
+  h4,
+  h5,
+  p,
+  label,
+  input,
+  button,
+  figcaption,
+  ::placeholder,
+  textarea {
+    color: #fff;
+  }
+
+  .wrap {
+    header {
+      h1 a {
+        background: url('../images/logo_white.png') no-repeat 0 /contain;
+      }
+
+      .lightBtn {
+        display: block;
+      }
+
+      .darkBtn {
+        display: none;
+      }
+
+      .menuBtn {
+        width: 37px;
+        height: 30px;
+        background: url('../images/icon_menu_white.png') no-repeat 50% /cover;
+
+        @include responsiveWEB(header) {
+          width: 25px;
+          height: 19px;
+          background: url('../images/icon_menu_resize_white.png') no-repeat 0 /contain;
+        }
+      }
+    }
+
+    :is(.bg1, .bg2, .bg3) svg path {
+      stroke: #fff;
+    }
+
+    main {
+      .skills {
+        .list li {
+          border-color: #fff;
+        }
+      }
+
+      .contact {
+        .border {
+          border-color: #fff;
+          background-color: $bgColor;
+
+          .emailForm {
+            input {
+              border-color: #fff;
+            }
+
+            textarea {
+              border-color: #fff;
+              outline: none;
+            }
+
+            button {
+              border-color: #fff;
+            }
+          }
+        }
+      }
+    }
+
+    footer {
+      ul li a {
+        color: #fff;
+
+        &:hover {
+          color: #FFA41B;
+        }
+      }
+    }
+
+
+  }
+}
