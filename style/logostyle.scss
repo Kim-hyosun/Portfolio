@@ -1,0 +1,35 @@
+$font-size: clamp(2.49rem, calc(2.03rem + 2.31vw), 3.82rem);
+$speed: 0.25s;
+
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.info:has(a:is(:hover, :focus))
+.info__line > :is(a:not(:hover, :focus), span) {
+  --opacity: 0.1;
+}
+a:is(:hover, :focus) {
+  text-decoration: none;
+  --active: 1;
+}
+
+:is(svg, .char) {
+  transition: transform $speed var(--ease-elastic-3);
+  display: inline-block;
+  transform:
+    rotate(calc((var(--active, 0) * var(--r, 0)) * 1deg))
+    translate(
+      calc((var(--active, 0) * var(--x, 0)) * 1%),
+      calc((var(--active, 0) * var(--y, 0)) * 1%)
+    );
+}
