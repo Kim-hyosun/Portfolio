@@ -18,16 +18,16 @@ function mouseMove(e) {
 		case 'click':
 			if (stage === 'click') return
 			scale = 2;
-			stage = 'click'
-			cursorChild.setAttribute('data-name', '')
-			cursorParent.className = ''
+			stage = 'click';
+			cursorChild.setAttribute('data-name', '');
+			cursorParent.className = '';
 			break
 		case 'link':
 			if (stage === 'link') return
 			scale = 3;
 			stage = 'link';
-			cursorChild.setAttribute('data-name', e.target.getAttribute('data-name'))
-			cursorParent.className = 'cursor-text-mode'
+			cursorChild.setAttribute('data-name', e.target.getAttribute('data-name'));
+			cursorParent.className = 'cursor-text-mode';
 			break
 
 		default:
@@ -35,7 +35,7 @@ function mouseMove(e) {
 			scale = 1;
 			stage = '';
 			cursorChild.setAttribute('data-name', '');
-			cursorParent.className = ''
+			cursorParent.className = '';
 			break
 	}
 	cursorChild.style.setProperty('--cursor-scale', scale);
