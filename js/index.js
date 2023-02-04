@@ -54,7 +54,7 @@
   const pathLength2 = path2.getTotalLength();
 
   path1.style.strokeDasharray = pathLength1;
-  path1.style.strokeDashoffset = calcDashoffset(window.innerHeight - (wrap1.offsetTop * 0.48), wrap1, pathLength1);
+  path1.style.strokeDashoffset = calcDashoffset((window.innerHeight - wrap1.offsetTop), wrap1, pathLength1);
 
   path2.style.strokeDasharray = pathLength2;
   path2.style.strokeDashoffset = calcDashoffset(window.innerHeight, wrap2, pathLength2);
@@ -66,37 +66,22 @@
   }
 
   window.addEventListener('scroll', () => {
-    const scrollY1 = window.scrollY - (wrap1.offsetTop * 0.4) + (window.innerHeight * 0.98);
+    const scrollY1 = window.scrollY + (window.innerHeight * 0.6);
     path1.style.strokeDashoffset = calcDashoffset(scrollY1, wrap1, pathLength1);
   })
 
   window.addEventListener('scroll', () => {
-    const scrollY2 = window.scrollY + (window.innerHeight * 0.8);
+    const scrollY2 = window.scrollY + (window.innerHeight * 0.7);
     path2.style.strokeDashoffset = calcDashoffset(scrollY2, wrap2, pathLength2);
   })
 })();
 
-/** logostyle 
-gsap.registerPlugin(SplitText);
-const anchors = document.querySelector('.infoLine a')
+/** main drowing path animation */
+(function drowMainPath() {
+  const mainPath = document.querySelector('#mainpath');
+  const mainPathlength = mainPath.getTotalLength();
 
+  mainPath.style.setProperty('--length', mainPathlength)
+})();
 
-  const res = splitting({
-    target: anchors,
-    by: 'chars'
-  })
-  const icon = anchor.querySelector('svg')
-  for (const char of [...res[0].chars, icon]) {
-    if (char) {
-      char.style.setProperty('--r', gsap.utils.random(-15, 15, 1))
-      char.style.setProperty('--y', gsap.utils.random(-50, 25, 1))
-      char.style.setProperty('--x', gsap.utils.random(-25, 25, 1))
-    }
-}
-function mouseOver() {
-  tl.restart();
-}
-
-document.getElementById("quote").addEventListener("mouseover", mouseOver);
-*/
 
