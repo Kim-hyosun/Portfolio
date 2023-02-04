@@ -7,11 +7,13 @@
     e.preventDefault();
     menuPage.classList.add('active');
     menuPage.classList.remove('none');
+    document.body.classList.add('noScroll');
   })
   menuClose.addEventListener('click', (e) => {
     e.preventDefault();
     menuPage.classList.remove('active');
     menuPage.classList.add('none');
+    document.body.classList.remove('noScroll');
   })
 })();
 
@@ -24,6 +26,7 @@
   menuWork.addEventListener('click', () => {
     menuPage.classList.remove('active');
     menuPage.classList.add('none');
+
   })
   menuAbout.addEventListener('click', () => {
     menuPage.classList.remove('active');

@@ -13,7 +13,7 @@
 	<meta property="og:description" content="KIMHYOSUN's PORTFOLIO">
 	<meta property="og:site_name" content="KIMHYOSUN's PORTFOLIO">
 	<!-- favicon -->
-	<link rel="shortcut icon" href="./common/images/favicon.ico">
+	<link rel="shortcut icon" href="./common/images/favicon32x32.ico">
 	<!-- reset -->
 	<link rel="stylesheet" href="./common/style/minireset.min.css">
 	<!-- font-->
@@ -23,11 +23,10 @@
 	<link rel="stylesheet" href="./style/basic.css">
 	<!-- cursorstyle -->
 	<link rel="stylesheet" href="./style/cursorstyle.css">
-	<!-- logostyle -->
-	<!-- <link rel="stylesheet" href="./logostyle.css"> -->
+
 </head>
 
-<body>
+<body class="noScroll">
 
 	<div class="wrap">
 		<div class="bg">
@@ -314,7 +313,6 @@
 	<script src="./js/cursor.js"></script>
 	<script>
 		const html = document.querySelector('html');
-		// html.style.overflowY = 'hidden'; //로딩 중 스크롤 방지
 		window.onload = function () {
 			const loading = document.querySelector('.loading');
 			const text = document.querySelector('.loading h3');
@@ -322,8 +320,8 @@
 			setTimeout(() => {
 				loading.classList.add('remove');
 				text.classList.remove('active');
+				document.body.classList.remove('noScroll');
 			}, 1000);
-			// html.style.overflow = 'auto'; //스크롤 방지 해제
 		};
 	</script>
 </body>
