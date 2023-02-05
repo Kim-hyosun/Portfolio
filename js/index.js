@@ -26,11 +26,12 @@
   menuWork.addEventListener('click', () => {
     menuPage.classList.remove('active');
     menuPage.classList.add('none');
-
+    document.body.classList.remove('noScroll');
   })
   menuAbout.addEventListener('click', () => {
     menuPage.classList.remove('active');
     menuPage.classList.add('none');
+    document.body.classList.remove('noScroll');
   })
 })();
 
@@ -58,6 +59,7 @@
 
   path1.style.strokeDasharray = pathLength1;
   path1.style.strokeDashoffset = calcDashoffset((window.innerHeight - wrap1.offsetTop), wrap1, pathLength1);
+  console.log(wrap1.offsetTop)
 
   path2.style.strokeDasharray = pathLength2;
   path2.style.strokeDashoffset = calcDashoffset(window.innerHeight, wrap2, pathLength2);
@@ -83,7 +85,6 @@
 (function drowMainPath() {
   const mainPath = document.querySelector('#mainpath');
   const mainPathlength = mainPath.getTotalLength();
-
   mainPath.style.setProperty('--length', mainPathlength)
 })();
 

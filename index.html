@@ -23,6 +23,8 @@
 	<link rel="stylesheet" href="./style/basic.css">
 	<!-- cursorstyle -->
 	<link rel="stylesheet" href="./style/cursorstyle.css">
+	<!-- preload -->
+	<link rel="stylesheet" href="./style/load.css">
 
 </head>
 
@@ -292,8 +294,14 @@
 				</li>
 			</ul>
 		</div>
-		<div class="loading">
-			<h3 class="active title">Welcome</h3>
+		<div class="loading loadContainer">
+			<h3 class="txt title">Welcome</h3>
+			<div class="sky">
+				<div class="stars"></div>
+				<div class="stars1"></div>
+				<div class="stars2"></div>
+				<div class="shootingStars"></div>
+			</div>
 		</div>
 
 	</div>
@@ -321,7 +329,7 @@
 				loading.classList.add('remove');
 				text.classList.remove('active');
 				document.body.classList.remove('noScroll');
-			}, 1000);
+			}, 1400);
 		};
 	</script>
 </body>

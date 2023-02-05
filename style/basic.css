@@ -111,6 +111,11 @@ body {
   width: calc(100% + 7px);
   cursor: none;
 }
+@media only screen and (max-width: 1023px) {
+  body {
+    cursor: pointer;
+  }
+}
 body .wrap {
   position: relative;
   /*    .bg1 {
@@ -150,11 +155,6 @@ body .wrap {
       top: 30vw;
     }
   } */
-  /* .bg3 {
-    width:74vw; margin:0 auto;
-    position: absolute;
-    bottom:13.6vw; right:5.8vw;
-  } */
 }
 body .wrap .loading {
   width: 100%;
@@ -162,13 +162,7 @@ body .wrap .loading {
   position: fixed;
   top: 0;
   left: 0;
-  background: #050505 no-repeat 0 100%;
-  z-index: 9999;
-  display: grid;
-  place-items: center;
-}
-body .wrap .loading h3 {
-  transform: translateY(-50%);
+  z-index: 9998;
 }
 body .wrap .loading.remove {
   display: none;
@@ -179,7 +173,7 @@ body .wrap header {
   width: 90vw;
   margin: 8px auto;
   position: sticky;
-  top: 20px;
+  top: 0;
   z-index: 99;
 }
 body .wrap header .logo a {
@@ -247,15 +241,25 @@ body .wrap .bg svg #mainpath {
   stroke-dasharray: var(--length);
   stroke-dashoffset: var(--length);
   animation: drowing 1.6s forwards;
-  animation-delay: 1.2s;
+  animation-delay: 1.4s;
 }
 body .wrap .bg1 {
-  width: 100%;
+  width: calc(100% + 7px);
   position: absolute;
-  top: 30.2vw;
+  top: calc(30.25vw + 7px);
+}
+@keyframes drowDelay {
+  100% {
+    stroke: black;
+  }
 }
 body .wrap .bg1 svg {
   width: calc(100% - 7px);
+}
+body .wrap .bg1 svg path {
+  stroke: transparent;
+  animation: drowDelay 1.6s forwards;
+  animation-delay: 3s;
 }
 body .wrap .bg2 {
   width: 100%;
@@ -273,34 +277,58 @@ body .wrap .bg2 svg {
   margin: 790px auto 0;
   font-size: 120px;
 }
-@media only screen and (min-width: 300px) and (max-width: 1600px) {
-  .wrap main h2 {
-    font-size: 90px;
-    margin: 660px auto 0;
-  }
-}
 @media only screen and (min-width: 1600px) and (max-width: 1800px) {
   .wrap main h2 {
-    font-size: 120px;
-    margin: 760px auto 0;
+    font-size: 100px;
+    margin: 660px auto 0;
   }
 }
 @media only screen and (min-width: 1400px) and (max-width: 1600px) {
   .wrap main h2 {
-    font-size: 100px;
-    margin: 700px auto 0;
+    font-size: 90px;
+    margin: 560px auto 0;
+  }
+}
+@media only screen and (min-width: 1300px) and (max-width: 1400px) {
+  .wrap main h2 {
+    font-size: 90px;
+    margin: 560px auto 0;
+  }
+}
+@media only screen and (min-width: 1200px) and (max-width: 1300px) {
+  .wrap main h2 {
+    font-size: 80px;
+    margin: 500px auto 0;
   }
 }
 @media only screen and (min-width: 1100px) and (max-width: 1200px) {
   .wrap main h2 {
-    font-size: 88px;
-    margin: 600px auto 0;
+    font-size: 70px;
+    margin: 460px auto 0;
+  }
+}
+@media only screen and (min-width: 1024px) and (max-width: 1100px) {
+  .wrap main h2 {
+    font-size: 70px;
+    margin: 400px auto 0;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   .wrap main h2 {
-    font-size: 70px;
-    margin: 560px auto 0;
+    font-size: 60px;
+    margin: 340px auto 0;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 928px) {
+  .wrap main h2 {
+    font-size: 60px;
+    margin: 300px auto 0;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 820px) {
+  .wrap main h2 {
+    font-size: 60px;
+    margin: 300px auto 0;
   }
 }
 @media only screen and (max-width: 767px) {
@@ -319,12 +347,12 @@ body .wrap .bg2 svg {
 }
 @media only screen and (min-width: 1400px) and (max-width: 1600px) {
   .wrap main .work {
-    margin: 63vw 0 0 10vw;
+    margin: 64vw 0 0 10vw;
   }
 }
 @media only screen and (min-width: 1300px) and (max-width: 1400px) {
   .wrap main .work {
-    margin: 64vw 0 0 10vw;
+    margin: 54vw 0 0 10vw;
   }
 }
 @media only screen and (min-width: 1200px) and (max-width: 1300px) {
@@ -337,17 +365,22 @@ body .wrap .bg2 svg {
     margin: 60vw 0 0 10vw;
   }
 }
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
-  .wrap main .work {
-    margin: 68vw 0 0 10vw;
-  }
-}
-@media only screen and (max-width: 767px) {
+@media only screen and (min-width: 1024px) and (max-width: 1100px) {
   .wrap main .work {
     margin: 60vw 0 0 10vw;
   }
 }
-.wrap main .work .wrap {
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .wrap main .work {
+    margin: 54vw 0 0 10vw;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .wrap main .work {
+    margin: 50svw 0 0 10vw;
+  }
+}
+.wrap main .wrap {
   display: grid;
   grid-template-columns: repeat(3, 22vw);
   grid-template-rows: repeat(17, 2vw);
@@ -358,77 +391,93 @@ body .wrap .bg2 svg {
   left: 6vw;
   z-index: 9;
 }
-@media only screen and (min-width: 1200px) and (max-width: 1300px) {
-  .wrap main .work .wrap {
-    grid-template-rows: repeat(17, 2vw);
+@media only screen and (min-width: 1600px) and (max-width: 1800px) {
+  .wrap main .wrap {
+    grid-template-rows: repeat(17, 1.8vw);
   }
 }
-@media only screen and (min-width: 1100px) and (max-width: 1200px) {
-  .wrap main .work .wrap {
-    grid-template-rows: repeat(17, 2vw);
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
-  .wrap main .work .wrap {
+@media only screen and (min-width: 1400px) and (max-width: 1600px) {
+  .wrap main .wrap {
     grid-template-rows: repeat(17, 1.6vw);
   }
 }
-@media only screen and (min-width: 768px) and (max-width: 928px) {
-  .wrap main .work .wrap {
+@media only screen and (min-width: 1300px) and (max-width: 1400px) {
+  .wrap main .wrap {
+    grid-template-rows: repeat(17, 1.2vw);
+  }
+}
+@media only screen and (min-width: 1200px) and (max-width: 1300px) {
+  .wrap main .wrap {
+    grid-template-rows: repeat(17, 1.2vw);
+  }
+}
+@media only screen and (min-width: 1100px) and (max-width: 1200px) {
+  .wrap main .wrap {
     grid-template-rows: repeat(17, 1vw);
   }
 }
-@media only screen and (min-width: 768px) and (max-width: 820px) {
-  .wrap main .work .wrap {
-    grid-template-rows: repeat(17, 0.4vw);
+@media only screen and (min-width: 1024px) and (max-width: 1100px) {
+  .wrap main .wrap {
+    grid-template-rows: repeat(17, 0.6vw);
+    grid-template-columns: repeat(3, 24vw);
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .wrap main .wrap {
+    grid-template-rows: repeat(17, 0.1vw);
   }
 }
 @media only screen and (max-width: 767px) {
-  .wrap main .work .wrap {
-    grid-template-rows: repeat(17, 0.3vw);
+  .wrap main .wrap {
+    grid-template-rows: repeat(17, 0.1vw);
   }
 }
-.wrap main .work .wrap .item {
+.wrap main .wrap .item {
   position: relative;
   overflow: hidden;
 }
-.wrap main .work .wrap .item:nth-child(1) {
+.wrap main .wrap .item:nth-child(1) {
   grid-row: 3/10;
 }
-.wrap main .work .wrap .item:nth-child(2) {
+.wrap main .wrap .item:nth-child(2) {
   grid-row: 2/9;
 }
-.wrap main .work .wrap .item:nth-child(3) {
+.wrap main .wrap .item:nth-child(3) {
   grid-row: 1/8;
 }
-.wrap main .work .wrap .item:nth-child(4) {
+.wrap main .wrap .item:nth-child(4) {
   grid-row: 10/17;
 }
-.wrap main .work .wrap .item:nth-child(5) {
+.wrap main .wrap .item:nth-child(5) {
   grid-row: 9/16;
 }
-.wrap main .work .wrap .item:nth-child(6) {
+.wrap main .wrap .item:nth-child(6) {
   grid-row: 8/15;
 }
-.wrap main .work .wrap .item:hover > .pg {
+@media only screen and (max-width: 767px) {
+  .wrap main .wrap .item:nth-child(6) {
+    display: none;
+  }
+}
+.wrap main .wrap .item:hover > .pg {
   left: 0;
 }
-.wrap main .work .wrap .item :is(.img, .pg3) .txt {
+.wrap main .wrap .item :is(.img, .pg3) .txt {
   height: 100%;
   display: grid;
   place-items: center;
 }
-.wrap main .work .wrap .item :is(.img, .pg3) .txt h6 {
+.wrap main .wrap .item :is(.img, .pg3) .txt h6 {
   font-size: 2.6rem;
   font-weight: 600;
   text-transform: uppercase;
   color: #fff;
 }
-.wrap main .work .wrap .item .img {
+.wrap main .wrap .item .img {
   background-color: #ddd;
   height: 100%;
 }
-.wrap main .work .wrap .item .pg {
+.wrap main .wrap .item .pg {
   position: absolute;
   top: 0;
   left: 100%;
@@ -436,14 +485,14 @@ body .wrap .bg2 svg {
   height: 100%;
   transition: left 0.4s;
 }
-.wrap main .work .wrap .item .pg1 {
+.wrap main .wrap .item .pg1 {
   background-color: #fff;
 }
-.wrap main .work .wrap .item .pg2 {
+.wrap main .wrap .item .pg2 {
   background-color: #FFA41B;
   transition-delay: 0.1s;
 }
-.wrap main .work .wrap .item .pg3 {
+.wrap main .wrap .item .pg3 {
   background-color: red;
   transition-delay: 0.2s;
 }
@@ -453,7 +502,7 @@ body .wrap .bg2 svg {
 }
 @media only screen and (min-width: 1600px) and (max-width: 1800px) {
   .wrap main .skills {
-    margin: 12vw 0 0 10vw;
+    margin: 24vw 0 0 10vw;
   }
 }
 @media only screen and (min-width: 1400px) and (max-width: 1600px) {
@@ -491,6 +540,11 @@ body .wrap .bg2 svg {
     margin: 10vw 0 0 10vw;
   }
 }
+@media only screen and (max-width: 767px) {
+  .wrap main .skills {
+    margin: 0 0 0 10vw;
+  }
+}
 .wrap main .skills .list li {
   display: grid;
   width: 1300px;
@@ -498,7 +552,7 @@ body .wrap .bg2 svg {
   grid-template-rows: 180px;
   align-items: center;
   border-bottom: 1px solid #000;
-  margin-left: 100px;
+  margin-left: 10%;
 }
 .wrap main .skills .list li:hover > h4 {
   color: #FFA41B;
@@ -664,22 +718,22 @@ body .wrap .bg2 svg {
   position: relative;
   left: 6px;
 }
-@media only screen and (min-width: 1400px) and (max-width: 1600px) {
-  .wrap main .skills .list li h4 span:nth-child(2) {
-    left: 0;
-    top: 40px;
-  }
-}
 @media only screen and (min-width: 300px) and (max-width: 1600px) {
   .wrap main .skills .list li h4 span:nth-child(2) {
     left: -20px;
-    top: 38px;
+    top: 0px;
   }
 }
 @media only screen and (min-width: 1400px) and (max-width: 1600px) {
   .wrap main .skills .list li h4 span:nth-child(2) {
     left: 0;
-    top: 38px;
+    top: 0;
+  }
+}
+@media only screen and (min-width: 1300px) and (max-width: 1400px) {
+  .wrap main .skills .list li h4 span:nth-child(2) {
+    left: -20px;
+    top: 36px;
   }
 }
 @media only screen and (min-width: 1200px) and (max-width: 1300px) {
@@ -694,13 +748,13 @@ body .wrap .bg2 svg {
     top: 0;
   }
 }
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
+@media only screen and (min-width: 1024px) and (max-width: 1100px) {
   .wrap main .skills .list li h4 span:nth-child(2) {
-    left: 0;
-    top: 0;
+    left: -50px;
+    top: 20px;
   }
 }
-@media only screen and (min-width: 768px) and (max-width: 820px) {
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
   .wrap main .skills .list li h4 span:nth-child(2) {
     left: -30px;
     top: 0;
@@ -753,27 +807,32 @@ body .wrap .bg2 svg {
 }
 @media only screen and (min-width: 1600px) and (max-width: 1800px) {
   .wrap main .about {
-    margin: 26vw 0 0 16vw;
+    margin: 20vw 0 0 16vw;
   }
 }
 @media only screen and (min-width: 1400px) and (max-width: 1600px) {
   .wrap main .about {
-    margin: 17vw 0 0 16vw;
+    margin: 40vw 0 0 16vw;
   }
 }
 @media only screen and (min-width: 1300px) and (max-width: 1400px) {
   .wrap main .about {
-    margin: 14vw 0 0 16vw;
+    margin: 40vw 0 0 16vw;
   }
 }
 @media only screen and (min-width: 1200px) and (max-width: 1300px) {
   .wrap main .about {
-    margin: 18vw 0 0 16vw;
+    margin: 24vw 0 0 16vw;
   }
 }
 @media only screen and (min-width: 1100px) and (max-width: 1200px) {
   .wrap main .about {
-    margin: 20vw 0 0 16vw;
+    margin: 24vw 0 0 16vw;
+  }
+}
+@media only screen and (min-width: 1024px) and (max-width: 1100px) {
+  .wrap main .about {
+    margin: 24vw 0 0 16vw;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
@@ -781,9 +840,9 @@ body .wrap .bg2 svg {
     margin: 10vw 0 0 16vw;
   }
 }
-@media only screen and (min-width: 768px) and (max-width: 820px) {
+@media only screen and (max-width: 767px) {
   .wrap main .about {
-    margin: 2vw 0 0 8vw;
+    margin: 2vw 0 0 16vw;
   }
 }
 .wrap main .about h5 {
@@ -880,29 +939,24 @@ body .wrap .bg2 svg {
     margin-top: 20vw;
   }
 }
-@media only screen and (min-width: 1400px) and (max-width: 1600px) {
+@media only screen and (min-width: 300px) and (max-width: 1600px) {
   .wrap main .contact {
-    margin-top: 14vw;
-  }
-}
-@media only screen and (min-width: 1300px) and (max-width: 1400px) {
-  .wrap main .contact {
-    margin-top: 14vw;
-  }
-}
-@media only screen and (min-width: 1200px) and (max-width: 1300px) {
-  .wrap main .contact {
-    margin-top: 10vw;
+    margin-top: 20vw;
   }
 }
 @media only screen and (min-width: 1100px) and (max-width: 1200px) {
   .wrap main .contact {
-    margin-top: 22vw;
+    margin-top: 12vw;
+  }
+}
+@media only screen and (min-width: 1024px) and (max-width: 1100px) {
+  .wrap main .contact {
+    margin-top: 12vw;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   .wrap main .contact {
-    margin-top: 6vw;
+    margin-top: 4vw;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 820px) {
@@ -958,26 +1012,20 @@ body .wrap .bg2 svg {
     padding: 10px 0 20px;
   }
 }
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .wrap main .contact .border {
+    padding: 8px 0 10px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .wrap main .contact .border {
+    padding: 6px 0 8px;
+  }
+}
 .wrap main .contact .border .emailForm label {
   font-size: 20px;
 }
 @media only screen and (min-width: 300px) and (max-width: 1600px) {
-  .wrap main .contact .border .emailForm label {
-    font-size: 20px;
-    display: block;
-  }
-}
-@media only screen and (min-width: 1100px) and (max-width: 1200px) {
-  .wrap main .contact .border .emailForm label {
-    display: none;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
-  .wrap main .contact .border .emailForm label {
-    display: none;
-  }
-}
-@media only screen and (max-width: 767px) {
   .wrap main .contact .border .emailForm label {
     display: none;
   }
@@ -1034,6 +1082,11 @@ body .wrap .bg2 svg {
     margin: 20px 0 0 20px;
   }
 }
+@media only screen and (max-width: 767px) {
+  .wrap main .contact .border .emailForm textarea {
+    margin: 20px 0 0 20px;
+  }
+}
 .wrap main .contact .border .emailForm button {
   font-size: 18px;
   margin: 20px 0 0 132px;
@@ -1067,6 +1120,11 @@ body .wrap .bg2 svg {
     margin: 20px 0 0 20px;
   }
 }
+@media only screen and (max-width: 767px) {
+  .wrap main .contact .border .emailForm button {
+    margin: 20px 0 0 20px;
+  }
+}
 @media only screen and (min-width: 300px) and (max-width: 1600px) {
   .wrap main .contact .border .kakao {
     display: none;
@@ -1087,19 +1145,19 @@ body .wrap .bg2 svg {
 }
 
 .wrap footer {
-  margin: 62vw 0 2vw 2vw;
+  margin: 64vw 0 2vw 2vw;
   display: flex;
   gap: 30px;
   font-size: 18px;
 }
 @media only screen and (min-width: 1600px) and (max-width: 1800px) {
   .wrap footer {
-    margin: 100vw 0 2vw 2vw;
+    margin: 68vw 0 2vw 2vw;
   }
 }
 @media only screen and (min-width: 1400px) and (max-width: 1600px) {
   .wrap footer {
-    margin: 56vw 0 2vw 2vw;
+    margin: 54vw 0 2vw 2vw;
   }
 }
 @media only screen and (min-width: 1200px) and (max-width: 1300px) {
@@ -1173,19 +1231,18 @@ body .wrap .bg2 svg {
   left: 14%;
 }
 .wrap .menuPage ul li a {
-  font-size: 6rem;
+  font-size: 5.8vw;
   font-weight: 500;
   color: transparent;
   background: linear-gradient(90deg, #FAE8E1 0%, #FFA41B 45%, #FB6363 65%) no-repeat 0 100%;
   background-size: 100% 0;
-  -webkit-text-stroke: 1px #fff;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.7);
   -webkit-background-clip: text;
   transition: background-size 0.4s ease-in;
   margin-bottom: 0.8vw;
 }
 .wrap .menuPage ul li a:hover {
   background-size: 100% 100%;
-  -webkit-text-stroke: 1px transparent;
 }
 .wrap .menuPage.none {
   display: none;
@@ -1231,8 +1288,8 @@ body.dark .wrap header .menuBtn {
     background: url("../images/icon_menu_resize_white.png") no-repeat 0/contain;
   }
 }
-body.dark .wrap :is(.bg1, .bg2, .bg) svg path {
-  stroke: #fff;
+body.dark .wrap :is(.bg, .bg1, .bg2) svg path {
+  stroke: #fff !important;
 }
 body.dark .wrap main .skills .list li {
   border-color: #fff;

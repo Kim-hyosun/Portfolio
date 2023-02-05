@@ -8,6 +8,11 @@
   mix-blend-mode: difference;
   z-index: 9997;
 }
+@media only screen and (max-width: 1023px) {
+  #mouseCursor {
+    display: none;
+  }
+}
 #mouseCursor div {
   position: relative;
   width: 30px;
