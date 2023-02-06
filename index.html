@@ -320,14 +320,12 @@
 	<script src="./js/index.js"></script>
 	<script src="./js/cursor.js"></script>
 	<script>
-		const html = document.querySelector('html');
+	
 		window.onload = function () {
 			const loading = document.querySelector('.loading');
-			const text = document.querySelector('.loading h3');
 
 			setTimeout(() => {
 				loading.classList.add('remove');
-				text.classList.remove('active');
 				document.body.classList.remove('noScroll');
 			}, 1400);
 		};
