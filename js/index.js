@@ -59,7 +59,8 @@
 
   path1.style.strokeDasharray = pathLength1;
   path1.style.strokeDashoffset = calcDashoffset((window.innerHeight - wrap1.offsetTop), wrap1, pathLength1);
-  console.log(wrap1.offsetTop)
+  // console.log(wrap1.offsetTop)
+  console.log(window.scrollY)
 
   path2.style.strokeDasharray = pathLength2;
   path2.style.strokeDashoffset = calcDashoffset(window.innerHeight, wrap2, pathLength2);

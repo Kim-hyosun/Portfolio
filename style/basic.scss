@@ -3,7 +3,7 @@ $mobileSize : 320px;
 $tabletSize : 768px;
 $pcSize : 1024px;
 
-/* 796px까지 대응되는 중... */
+/* 760px까지 대응 */
 // mediaquery 
 @mixin responsiveWEB ($media) {
   @if $media ==mob {
@@ -77,11 +77,25 @@ $pcSize : 1024px;
       @content;
     }
   }
+  @else if $media ==tabpc0 {
+
+    // 1400~1600
+    @media only screen and (min-width: 1400px) and (max-width: 1500px) {
+      @content;
+    }
+  }
 
   @else if $media ==tabpc {
 
     // 1400~1600
     @media only screen and (min-width: 1400px) and (max-width: 1600px) {
+      @content;
+    }
+  }
+  @else if $media ==pc3 {
+
+    // 1600~1800
+    @media only screen and (min-width: 1600px) and (max-width: 1700px) {
       @content;
     }
   }
@@ -149,6 +163,12 @@ a {
   text-decoration: none;
   display: block;
   cursor: none;
+  @include responsiveWEB(tab) {
+    cursor: pointer;
+  }
+  @include responsiveWEB(mobtb) {
+    cursor: pointer;
+  }
 }
 
 img {
@@ -167,11 +187,7 @@ h3 {
   font-size: 100px;
 
   @include responsiveWEB(full) {
-    font-size: 80px;
-  }
-
-  @include responsiveWEB(tab) {
-    font-size: 60px;
+    font-size: 70px;
   }
 
   @include responsiveWEB(tab) {
@@ -203,6 +219,10 @@ h4 {
   }
 
   @include responsiveWEB(tabpc3) {
+    font-size: 30px;
+  }
+
+  @include responsiveWEB(tabpc4) {
     font-size: 30px;
   }
 
@@ -259,7 +279,7 @@ body {
       width: 90vw;
       margin: 8px auto;
       position: sticky;
-      top: 0;
+      top: 8px;
       z-index: 99;
 
       .logo a {
@@ -334,7 +354,7 @@ body {
         #mainpath {
           stroke-dasharray: var(--length);
           stroke-dashoffset: var(--length);
-          animation: drowing 1.6s forwards;
+          animation: drowing 1.4s forwards;
           animation-delay: 1.4s;
         }
       }
@@ -403,9 +423,12 @@ body {
     .bg2 {
       width: 100%;
       position: absolute;
-      top: 314vw;
+      top: 297vw;
       display: flex;
       justify-content: center;
+      @include responsiveWEB(full) {
+        top: 312vw;
+      }
 
       svg {
         width: 84%;
@@ -417,7 +440,7 @@ body {
 }
 
 .wrap {
-  main {
+    main {
 
     h2 {
       width: 90vw;
@@ -461,16 +484,16 @@ body {
 
       @include responsiveWEB(tab1) {
         font-size: 60px;
-        margin: 300px auto 0;
+        margin: 320px auto 0;
       }
 
       @include responsiveWEB(tab2) {
-        font-size: 60px;
+        font-size: 54px;
         margin: 300px auto 0;
       }
 
       @include responsiveWEB(mobtb) {
-        font-size: 60px;
+        font-size: 54px;
         margin: 300px auto 0;
       }
 
@@ -509,11 +532,14 @@ body {
       }
 
       @include responsiveWEB(tab) {
-        margin: 54vw 0 0 10vw;
+        margin: 60vw 0 0 10vw;
+      }
+      @include responsiveWEB(tab1) {
+        margin: 64vw 0 0 10vw;
       }
 
       @include responsiveWEB(mobtb) {
-        margin: 50svw 0 0 10vw;
+        margin: 60vw 0 0 10vw;
       }
     }
 
@@ -588,6 +614,12 @@ body {
         &:nth-child(6) {
           grid-row: 8/15;
 
+          @include responsiveWEB(tab1) {
+            display: none;
+          }
+          @include responsiveWEB(tab2) {
+            display: none;
+          }
           @include responsiveWEB(mobtb) {
             display: none;
           }
@@ -642,10 +674,8 @@ body {
     }
   }
 }
-
-
 .wrap {
-  main {
+    main {
     .skills {
       margin: 12vw 0 0 10vw;
 
@@ -670,7 +700,7 @@ body {
       }
 
       @include responsiveWEB(tab) {
-        margin: 12vw 0 0 10vw;
+        margin: 4vw 0 0 10vw;
       }
 
       @include responsiveWEB(tab1) {
@@ -678,7 +708,7 @@ body {
       }
 
       @include responsiveWEB(tab2) {
-        margin: 10vw 0 0 10vw;
+        margin: 0 0 0 10vw;
       }
 
       @include responsiveWEB(mobtb) {
@@ -704,8 +734,8 @@ body {
         }
 
         @include responsiveWEB(tabpc) {
-          max-width: 1200px;
-          min-width: 1000px;
+          max-width: 1100px;
+          min-width: 900px;
           grid-template-rows: 140px;
           margin-left: 80px;
         }
@@ -725,6 +755,15 @@ body {
         }
 
         @include responsiveWEB(tabpc3) {
+          max-width: 800px;
+          min-width: 700px;
+          grid-template-rows: 40px 80px;
+          grid-template-columns: 1fr;
+          padding: 10px 0;
+          margin-left: 60px;
+        }
+
+        @include responsiveWEB(tabpc4) {
           max-width: 800px;
           min-width: 700px;
           grid-template-rows: 40px 80px;
@@ -796,6 +835,9 @@ body {
             }
 
             @include responsiveWEB(tabpc3) {
+              font-size: 30px;
+            }
+            @include responsiveWEB(tabpc4) {
               font-size: 30px;
             }
 
@@ -872,12 +914,20 @@ body {
               }
 
               @include responsiveWEB(tabpc4) {
-                left: -50px;
-                top: 20px;
+                left: -30px;
+                top: 0;
               }
 
               @include responsiveWEB(tab) {
                 left: -30px;
+                top: 0;
+              }
+              @include responsiveWEB(tab1) {
+                left: 0;
+                top: 0;
+              }
+              @include responsiveWEB(tab1) {
+                left: 0;
                 top: 0;
               }
 
@@ -929,19 +979,23 @@ body {
     }
   }
 }
-
 .wrap {
   main {
     .about {
-      margin: 36vw 0 0 16vw;
+      margin: 20vw 0 0 16vw;
 
       @include responsiveWEB(pc2) {
-        margin: 20vw 0 0 16vw;
+        margin: 26vw 0 0 16vw;
+      }
+      @include responsiveWEB(pc3) {
+        margin: 34vw 0 0 16vw;
       }
 
-
       @include responsiveWEB(tabpc) {
-        margin: 40vw 0 0 16vw;
+        margin: 50vw 0 0 16vw;
+      }
+      @include responsiveWEB(tabpc0) {
+        margin: 36vw 0 0 16vw;
       }
 
       @include responsiveWEB(tabpc1) {
@@ -949,19 +1003,25 @@ body {
       }
 
       @include responsiveWEB(tabpc2) {
-        margin: 24vw 0 0 16vw;
+        margin: 40vw 0 0 16vw;
       }
 
       @include responsiveWEB(tabpc3) {
-        margin: 24vw 0 0 16vw;
+        margin: 30vw 0 0 16vw;
       }
 
       @include responsiveWEB(tabpc4) {
-        margin: 24vw 0 0 16vw;
+        margin: 20vw 0 0 16vw;
       }
 
       @include responsiveWEB(tab) {
+        margin: 30vw 0 0 16vw;
+      }
+      @include responsiveWEB(tab1) {
         margin: 10vw 0 0 16vw;
+      }
+      @include responsiveWEB(tab2) {
+        margin: 2vw 0 0 16vw;
       }
 
       @include responsiveWEB(mobtb) {
@@ -986,6 +1046,9 @@ body {
         }
 
         @include responsiveWEB(tabpc3) {
+          font-size: 20px;
+        }
+        @include responsiveWEB(tabpc4) {
           font-size: 20px;
         }
 
@@ -1022,6 +1085,9 @@ body {
         @include responsiveWEB(tabpc3) {
           font-size: 16px;
         }
+        @include responsiveWEB(tabpc4) {
+          font-size: 16px;
+        }
 
         @include responsiveWEB(tab) {
           font-size: 16px;
@@ -1038,7 +1104,6 @@ body {
     }
   }
 }
-
 .wrap {
   main {
     .contact {
@@ -1050,11 +1115,18 @@ body {
       width: 60vw;
 
       @include responsiveWEB(pc2) {
-        margin-top: 20vw;
+        margin-top: 18vw;
+      }
+      @include responsiveWEB(pc3) {
+        margin-top: 16vw;
       }
 
       @include responsiveWEB(full) {
         margin-top: 20vw;
+      }
+
+      @include responsiveWEB(tabpc2) {
+        margin-top: 6vw;
       }
 
       @include responsiveWEB(tabpc3) {
@@ -1062,11 +1134,11 @@ body {
       }
 
       @include responsiveWEB(tabpc4) {
-        margin-top: 12vw;
+        margin-top: 10vw;
       }
 
       @include responsiveWEB(tab) {
-        margin-top: 4vw;
+        margin-top: 6vw;
       }
 
       @include responsiveWEB(tab2) {
@@ -1111,6 +1183,9 @@ body {
         @include responsiveWEB(tabpc3) {
           padding: 20px 40px 20px;
         }
+        @include responsiveWEB(tabpc4) {
+          padding: 20px 40px 20px;
+        }
 
         @include responsiveWEB(tab) {
           padding: 10px 0 20px;
@@ -1143,7 +1218,7 @@ body {
             margin: 10px 0 0 16px;
             background-color: transparent;
             border-bottom: 1px solid #000;
-
+            
             @include responsiveWEB(tabpc) {
               font-size: 16px;
             }
@@ -1178,6 +1253,9 @@ body {
             @include responsiveWEB(tabpc3) {
               margin: 20px 0 0 20px;
             }
+            @include responsiveWEB(tabpc4) {
+              margin: 20px 0 0 20px;
+            }
 
             @include responsiveWEB(tab) {
               margin: 20px 0 0 20px;
@@ -1210,6 +1288,9 @@ body {
             }
 
             @include responsiveWEB(tabpc3) {
+              margin: 20px 0 0 20px;
+            }
+            @include responsiveWEB(tabpc4) {
               margin: 20px 0 0 20px;
             }
 
@@ -1252,13 +1333,16 @@ body {
 .wrap {
 
   footer {
-    margin: 64vw 0 2vw 2vw;
+    margin: 58vw 0 2vw 2vw;
     display: flex;
     gap: 30px;
     font-size: 18px;
 
     @include responsiveWEB(pc2) {
-      margin: 68vw 0 2vw 2vw;
+      margin: 62vw 0 2vw 2vw;
+    }
+    @include responsiveWEB(pc3) {
+      margin: 62vw 0 2vw 2vw;
     }
 
     @include responsiveWEB(tabpc) {
@@ -1270,7 +1354,7 @@ body {
     }
 
     @include responsiveWEB(tabpc3) {
-      margin: 50vw 0 2vw 2vw;
+      margin: 60vw 0 2vw 2vw;
     }
 
     @include responsiveWEB(tab) {
@@ -1352,7 +1436,7 @@ body {
         -webkit-text-stroke: 1px rgba(255, 255, 255, 0.7);
         -webkit-background-clip: text;
         transition: background-size 0.4s ease-in;
-        margin-bottom: .8vw;
+        margin-bottom: .6vw;
 
 
         &:hover {
