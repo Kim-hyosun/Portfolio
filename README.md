@@ -3,7 +3,7 @@
 ---
 
 <aside>
-🥰 ![사이트 바로가기](https://kim-hyosun.github.io/Portfolio/)
+🥰 [사이트 바로가기](https://kim-hyosun.github.io/Portfolio/)
 
 </aside>
 
@@ -42,7 +42,7 @@
 ## **로딩 화면**
 
 <aside>
-💡 o*nload*와 *setTimeout* 이용
+💡 _onload_와 _setTimeout_ 이용
 
 로딩 시간이 길면 user이탈이 발생할 수 있다고 생각되어
 
@@ -53,7 +53,7 @@
 ## 마우스 커서
 
 <aside>
-💡 css의  *mix-blend-mode와*  *e.pageX, Y*속성을 이용하여 스타일
+💡 css의  _mix-blend-mode_와  _e.pageX, Y_ 속성을 이용하여 스타일
 
 클릭 이벤트가 발생할 태그에 data 속성을 넣어서 *swich*문으로 _data_ 속성을 검증 후 커서의 크기를 바꾸고, 간단한 설명 텍스트를 넣음
 
@@ -62,7 +62,7 @@
 ## **svg path가 그려지는 애니메이션**
 
 <aside>
-💡 css 속성 *dashoffset*이 *dasharray*와 같은 값일 때는 path가 그려지지 않고, *dashoffset*이 0이 되면 path가 전부 나타나는 원리를 이용
+💡 css 속성 _dashoffset_이 _dasharray_와 같은 값일 때는 path가 그려지지 않고, *dashoffset*이 0이 되면 path가 전부 나타나는 원리를 이용
 
 초기 *dasharray*와 초기 *dashoffset*의 값은 모니터 화면의 길이가 바뀔 때마다 svg의 길이가 바뀌기 때문에 명시적으로 작성하지 않고, 스크립트의 기본 내장 함수인 _getTotalLength();_ 를 이용하여 변수로 css에 전달
 
@@ -84,7 +84,7 @@ ratio는 항상 1이거나 1보다 큼.
 
 그렇기 때문에 value 값은 항상 마이너스 값이 남음.
 
-화면에 아무것도 그려지지 않은 상태는 (svg요소의 offsetTop값)과 (위 변수로 지정한 scrollY의 값)이 **일치**하기 때문에
+화면에 아무것도 그려지지 않은 상태는 (svg요소의 offsetTop값)과 (위 변수로 지정한 scrollY의 값)이 일치하기 때문에
 
 ratio는 항상 0이거나 0보다 적음.
 
@@ -158,7 +158,7 @@ value값이 dasharray의 값보다 크면 value가 아닌 dasharray의 값을 �
 ## 🔥 화면 가로 사이즈 변경 시 초기 svg path의 길이가 들쭉날쭉?!
 
 <aside>
-💡 **⇒ 애니메이션과 dashoffset의 초기 값을 재설정하여 처리**
+💡 ⇒ 애니메이션과 dashoffset의 초기 값을 재설정하여 처리
 
 **🔥**랜딩 되었을 때 스크롤 값이 발생하지 않기 때문에 초기 dashoffset으로 설정된 값에 따라 path가 일부 보이고 보이는 값이 화면 사이즈 변경마다 달라진다고 판단
 
@@ -170,7 +170,7 @@ value값이 dasharray의 값보다 크면 value가 아닌 dasharray의 값을 �
 ⇒ 초기 dashoffset값에는 window.innerHeight만 할당하였는데 이는 화면 사이즈가 변경 될 때마다 차이가 생겨 최대한 길이를 감추면서 화면 사이즈 변경에 대응이 될 만한 값을 찾다가 window.innerHeight에서 svg의 offsetTop값을 한번 빼고 할당하여 해결
 
 <aside>
-✅ **@keyframes drowing { 100%{** stroke-dashoffset: 0;  **}  }**
+✅ @keyframes drowing { 100%{** stroke-dashoffset: 0;  **}  }
 
 </aside>
 
@@ -197,7 +197,5 @@ value값이 dasharray의 값보다 크면 value가 아닌 dasharray의 값을 �
 # 6. 페이지 스크롤 영상
 
 ⇒ (1920px \* 1080px) chrome
-
----
 
 [https://youtu.be/n8CF_WEKS0I](https://youtu.be/n8CF_WEKS0I)
