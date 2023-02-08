@@ -3,7 +3,7 @@
 ---
 
 <aside>
-🥰 <a href="https://kim-hyosun.github.io/Portfolio/" target="_blank">포트폴리오 바로가기</a>
+🥰 <a href="https://kim-hyosun.github.io/Portfolio/" target="_blank">포트폴리오 바로가기</a> 🥰
 
 </aside>
 
