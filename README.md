@@ -3,7 +3,7 @@
 ---
 
 <aside>
-🥰 [사이트 바로가기](https://kim-hyosun.github.io/Portfolio/)
+🥰 <a href="https://kim-hyosun.github.io/Portfolio/" target="_blank">포트폴리오 바로가기</a>
 
 </aside>
 
@@ -177,7 +177,7 @@ value값이 dasharray의 값보다 크면 value가 아닌 dasharray의 값을 �
 ⇒ 또 처음에 보여지는 path는 복잡하여 요소의 offsetTop을 빼고 할당하는 정도로는 감당 되지 않아 랜딩 시 보여질 path는 분리하여 css 애니메이션으로 처리
 
 <aside>
-✅ **@keyframes drowDelay { 100%{  stroke: black;  }  }**
+✅ @keyframes drowDelay { 100%{  stroke: black;  }  }
 
 </aside>
 
