@@ -2,15 +2,8 @@
 
 ---
 
-### Vanilla javascript / ES6+ / HTML / SCSS /
-
 <aside>
-👉 작업 기간  :  2023년 1월 16일 ~ 2023년 2월 6일 (약 3주 소요)
-
-</aside>
-
-<aside>
-🥰
+🥰 ![사이트 바로가기](https://kim-hyosun.github.io/Portfolio/)
 
 </aside>
 
@@ -18,10 +11,9 @@
 
 ---
 
-1. 디자인의 강약 조절을 통해 보여주고 싶은 content를 강조한다.
-2. svg의 속성과 바닐라 자바스크립트를 이용하여 스크롤 애니메이션을 익힌다.
-3. html의 data속성과 바닐라 자바스크립트를 이용하여 정보를 전달한다.
-4. scss의 mixin과 include를 활용하여 \***\*Media Query\*\***를 작성한다.
+> **1. 라이브러리 없이 제작하는 만큼 Vanilla JS 본질에 집중하여 Interactive Web 구현하기**
+
+> **2. SCSS문법을 최대한 활용하기!**
 
 # 2. 디렉토리 구조와 코딩컨벤션
 
@@ -35,77 +27,172 @@
 
 ![코딩컨벤션.png](./common/images/%EC%BD%94%EB%94%A9%EC%BB%A8%EB%B2%A4%EC%85%98.png)
 
-# 3. 주요 기능 설명
+# 3. 사용 기술
 
 ---
 
-1. **마우스 커서**
+### 👍 UI Design **:** Vanila Javascipt / HTML / SCSS / SVG
 
-   css의 *mix-blend-mode*를 통하여 디자인 하고, [\*e.page](http://e.page)X, Y\*속성을 이용하여 커서 스타일을 넣었습니다.
-
-   클릭 이벤트가 발생할 곳에 data속성을 넣어서 *swich*문으로 *data*속성을 검증하여 커서의 크기를 키우거나, 안에 간단한 설명 텍스트를 넣어 user의 편의를 추구하였습니다.
-
-   또 user가 웹에서 요소를 클릭을 하고 있음에 대한 이벤트는 마우스가 down될 때는 살짝 *scale*이 작아지고 up될 때는 *scale*을 살짝 커지게 처리 하였습니다.
-
-2. **로딩 화면**
-
-   _onload_ 함수를 이용하여 로딩 화면을 넣었지만, 실제 화면이 구성되는데 시간이 1초 이하로 소요되어 화면이 잠시 보여지고 없어지도록 *setTimeout*을 이용하여 로딩 화면 효과를 주었습니다.
-
-   다만, 오랜 시간이 소요되면 user 이탈이 발생할 수 있다고 판단되어 로딩 화면(1.4s) + 초기 svg애니메이션의 작동 시간(1.4s) 을 3초 내로 처리하였습니다.
-
-   화면은 별똥별을 보면 소원이 이루어진다는 의미에서 착안하여 제 개인적인 취업의 간절함을 표현함과 동시에 방문해주신 user 를 반기는 인사 기능으로 넣었습니다.
-
-3. **svg애니메이션**
-
-   svg path의 *stroke-dasharray*와 _stroke-dashoffset_ 을 이용하여 *dashoffset*이 0에 이르도록 하여 path가 그려지는 애니메이션을 만들었습니다.
-
-   *dasharray*는 path 전체 길이를 나타냅니다. *dashoffset*이 *dasharray*와 같은 값일 때는 path가 그려지지 않고, *dashoffset*이 0이 되면 path가 전부 나타나는 원리를 이용하였습니다.
-
-   다만 초기 *dasharray*와 초기 *dashoffset*의 값은 모니터 화면의 길이가 바뀔 때마다 svg의 길이가 바뀌기 때문에 명시적으로 작성하지 않고, 스크립트의 기본 내장 함수인 _getTotalLength();_ 를 이용하여 변수로 css에 전달하였습니다.
-
-4. **svg 스크롤 이벤트**
-
-   위 애니메이션이 실행된 이후 사용자가 스크롤을 하면 path가 그려집니다.
-
-   초기 *dasharray*는 위와 동일하게 _getTotalLength();_ 를 이용하여 구하여 치환하여 넣고, *dashoffset*은 연산을 위한 함수calcDashoffset을 이용해서 치환하였습니다.
-
-   *dashoffset*이 0이 되는 지점은 path높이의 가장 아래 지점과 일치해야 하고, *dashoffset*이 *dasharray*와 같은 값을 가지는 지점은 path높이의 가장 윗부분과 일치 되어 그 비율(변수 ratio)에 따라 path가 화면에서 그려지게 됩니다.
-
-5. **work 파트의 grid 정렬**
-
-   masonry layout의 스타일과 비슷하지만, masonry 를 쓰지 않고 기본 grid의 기능을 이용하여 구현하였습니다.
-
-6. **다크 모드와 라이트 모드**
-
-   클래스 자를 추가 하여 css를 적용하는 방법으로 구현하였습니다.
-
-7. **Contact의 email**
-
-   openAPI emailjs를 사용하여 넣었습니다.
-
-8. **hover기능을 통한 강조**
-
-   work와 skills부분이 눈에 잘 들어올 수 있도록 css의 hover 효과를 이용하였고, menupage와 loading화면text에 cliptext기능을 이용하여 gradient를 color로 넣었습니다.
+### 👍 U**sed Tools :** GitHub / Visual Studio Code / Figma
 
 # 4. 페이지 구성
 
 ---
 
-- 바닐라 자바스크립트를 이용한 마우스 커서 디자인 및 data속성 이용한 커서 이벤트, 다크 모드, 이벤트 리스너와 a링크 기능을 이용한 경로 이동, svg애니메이션, svg스크롤 이벤트 구현, 로딩 화면
-- EmailJS API를 이용한 contact form
-- scss 미디어 쿼리와 mixin include를 통한 1920px ~ 769px까지 대응
+## **로딩 화면**
+
+<aside>
+💡 o*nload*와 *setTimeout* 이용
+
+로딩 시간이 길면 user이탈이 발생할 수 있다고 생각되어
+
+로딩 화면(1.4s) + 초기 svg애니메이션의 작동 시간(1.4s)을 3초 내 처리
+
+</aside>
+
+## 마우스 커서
+
+<aside>
+💡 css의  *mix-blend-mode와*  *e.pageX, Y*속성을 이용하여 스타일
+
+클릭 이벤트가 발생할 태그에 data 속성을 넣어서 *swich*문으로 _data_ 속성을 검증 후 커서의 크기를 바꾸고, 간단한 설명 텍스트를 넣음
+
+</aside>
+
+## **svg path가 그려지는 애니메이션**
+
+<aside>
+💡 css 속성 *dashoffset*이 *dasharray*와 같은 값일 때는 path가 그려지지 않고, *dashoffset*이 0이 되면 path가 전부 나타나는 원리를 이용
+
+초기 *dasharray*와 초기 *dashoffset*의 값은 모니터 화면의 길이가 바뀔 때마다 svg의 길이가 바뀌기 때문에 명시적으로 작성하지 않고, 스크립트의 기본 내장 함수인 _getTotalLength();_ 를 이용하여 변수로 css에 전달
+
+</aside>
+
+## **스크롤 할 때마다 svg path가 그려지는 이벤트**
+
+<aside>
+💡 스크롤 값에 따라 dashoffset 을 줄여주면 스크롤 한만큼 path가 그려지는 효과
+
+| const scrollY = window.scrollY + (window.innerHeight); // 스크롤 값 + 화면높이                  |
+| ----------------------------------------------------------------------------------------------- |
+| const ratio = (scrollY - svg요소.offsetTop) / svg요소.offsetHeight;                             |
+| const value = dasharray의 값 - (dasharray의 값 \* ratio); // 스크롤 시 Dashoffset에 대입되는 값 |
+
+화면에 모든 path가 그려진 후는 (위 변수로 지정한 scrollY - svg요소의 offsetTop)의 값이 (svg요소의 offsetHeight값)보다 항상 크기 때문에
+
+ratio는 항상 1이거나 1보다 큼.
+
+그렇기 때문에 value 값은 항상 마이너스 값이 남음.
+
+화면에 아무것도 그려지지 않은 상태는 (svg요소의 offsetTop값)과 (위 변수로 지정한 scrollY의 값)이 **일치**하기 때문에
+
+ratio는 항상 0이거나 0보다 적음.
+
+그렇기 때문에 value값은 항상 dasharray의 값이 남음
+
+항상 value 값이 dasharray ~ 0 사이의 값을 가질 수 있도록,
+
+value값이 0보다 적으면 항상 0을 반환하도록 하고,
+
+value값이 dasharray의 값보다 크면 value가 아닌 dasharray의 값을 반환하도록
+
+아래와 같이 조건 식을 작성
+
+| return value < 0 ? 0 : value > length ? length : value; |
+| ------------------------------------------------------- |
+
+</aside>
+
+## **work 부분의 grid 정렬**
+
+<aside>
+💡 masonry 스타일을 쓰지 않고 기본 grid의 기능을 이용하여 구현
+
+</aside>
+
+## **다크 모드와 라이트 모드**
+
+<aside>
+💡 클릭 이벤트로 변수로 지정한 배경을 바꿈
+
+</aside>
+
+## **Contact의 emailform**
+
+<aside>
+💡 openAPI email JS를 사용함
+
+</aside>
 
 # 5. 문제 및 해결 과정
 
 ---
 
-- 초기에 svg 애니메이션 없이 처음부터 끝까지 스크롤 시 path가 그려지도록 처리 하였는데, 화면 로드 후 스크롤 되는 값이 없다 보니, 화면에 처음 구성되는 path의 길이가 (모니터 가로에 따라 달라지는) offset값에 따라 들쭉날쭉하게 처리되었습니다.
-  그래서 초기 값을 항상 같게 처리해주기 위해서 스크롤 이벤트가 아닌 화면 로드시 바로 재생되는 애니메이션으로 처리하는 것으로 처리하였습니다.
-- 그렇게 했지만 애니메이션과 연결되는 스크롤 svg의 path가 초기 값으로 일부 보여지는 현상이 있었습니다. (스크롤 해야만 보여져야 하는데 스크롤 없이도 보여지는 현상)
-  (정확한 이유는 아니지만,) 제가 초기 화면에 svg애니메이션 넣기 전에도 비슷한 현상이 있었고, 그 현상의 원인이 모니터의 가로 값에 따라 달라지는 요소의 offsetTop값이 영향을 미쳤다고 생각이 들었습니다.
-  그래서 초기 dashoffset 설정 시 스크롤이 발생하지 않을 때에는 path가 보여지지 않도록 요소의 offsetTop값을 한번 더 빼주었더니 스크롤 시에만 보여지는 path 로 처리가 되었습니다.
-- svg 애니메이션 영역과 스크롤 svg가 같이 연결되도록 레이아웃을 잡아주는 것이 쉽지 않았습니다. viewbox속성에 맞춰 모니터 가로에 따라 svg가 움직이고, html 작성 시 content영역과 스크롤 이미지 영역으로 나눠서 스크롤 이미지 영역에 content가 겹쳐지도록 처리했기 때문에 영역을 나누는 것 또한 쉽지 않았습니다.
-  그래서 position을 이용하여 영역을 잡고, 가로는 디자인 자체를 100% 정중앙으로 왔을 때 서로 이어질 수 있도록 처리하였으며, 스크롤 바 7px을 빼서 처리하였습니다.
+## 🔥 로딩 화면이 깜빡하고 사라진다!?
+
+<aside>
+💡 ⇒ window.onload 안에 setTimeout함수를 넣어 로딩 화면이 보이도록 설정
+
+</aside>
+
+## 🔥 svg의 Y좌표를 viewbox Y로 처리시 offsetTop이 0이 되는 현상
+
+<aside>
+💡 inspecter로 확인했을 때 viewbox Y값 만큼을 컨텐츠 영역으로 인식함
+
+⇒ position top 값을 부여하여 스크롤 시 영역이 확인됨
+
+더 좋은 방법이 있을지 더 고민하겠습니다.
+
+</aside>
+
+## 🔥 화면 가로 사이즈 변경 시 path간 연결 부분이 틀어지는 현상
+
+<aside>
+💡 아직 정확한 해결 점을 찾지는 못하였으나, 1차적으로 디자인 시 비율이 살짝 달리 작업된 부분이 있다는 점이 걸리나,
+
+⇒ 이를 해결하고자 position의 값을 수정하여 가장 맞는 값으로 처리
+
+</aside>
+
+## 🔥 화면 가로 사이즈 변경 시 초기 svg path의 길이가 들쭉날쭉?!
+
+<aside>
+💡 **⇒ 애니메이션과 dashoffset의 초기 값을 재설정하여 처리**
+
+**🔥**랜딩 되었을 때 스크롤 값이 발생하지 않기 때문에 초기 dashoffset으로 설정된 값에 따라 path가 일부 보이고 보이는 값이 화면 사이즈 변경마다 달라진다고 판단
+
+<aside>
+✅ path.style.strokeDashoffset = calcDashoffset((window.innerHeight - wrap1.offsetTop), wrap1, pathLength1);
+
+</aside>
+
+⇒ 초기 dashoffset값에는 window.innerHeight만 할당하였는데 이는 화면 사이즈가 변경 될 때마다 차이가 생겨 최대한 길이를 감추면서 화면 사이즈 변경에 대응이 될 만한 값을 찾다가 window.innerHeight에서 svg의 offsetTop값을 한번 빼고 할당하여 해결
+
+<aside>
+✅ **@keyframes drowing { 100%{** stroke-dashoffset: 0;  **}  }**
+
+</aside>
+
+⇒ 또 처음에 보여지는 path는 복잡하여 요소의 offsetTop을 빼고 할당하는 정도로는 감당 되지 않아 랜딩 시 보여질 path는 분리하여 css 애니메이션으로 처리
+
+<aside>
+✅ **@keyframes drowDelay { 100%{  stroke: black;  }  }**
+
+</aside>
+
+⇒ 위 애니메이션과 연결되고 스크롤 시 보여지는 path는 애니메이션이 끝나면 선이 나타나는 애니메이션 추가
+
+</aside>
+
+## 🔥 메뉴 페이지에서 선택한 위치로 이동이 안되는 현상?!
+
+<aside>
+💡  ⇒ e.preventDefalut(); 삭제하여 anchor태그 기본 속성으로 이동
+
+</aside>
+
+## 🔥 contact form Email 검증하기
 
 # 6. 페이지 스크롤 영상
 
