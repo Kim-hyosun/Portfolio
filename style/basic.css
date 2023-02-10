@@ -202,28 +202,36 @@ body .wrap header .logo a {
 body .wrap header .icons {
   margin-left: auto;
   display: flex;
-  text-indent: -9999px;
   align-items: center;
   gap: 20px;
 }
 body .wrap header .icons a {
   padding: 0 6px 0;
 }
+body .wrap header .icons .des {
+  line-height: 1.1;
+  text-align: center;
+  position: relative;
+  bottom: -4px;
+}
 body .wrap header .icons .darkBtn {
   width: 51px;
   height: 48px;
   background: url("../images/icon_dark.png") no-repeat 50%/cover;
+  text-indent: -9999px;
 }
 body .wrap header .icons .lightBtn {
   width: 61px;
   height: 32px;
   background: url("../images/icon_light.png") no-repeat 0/contain;
   display: none;
+  text-indent: -9999px;
 }
 body .wrap header .icons .menuBtn {
   width: 37px;
   height: 30px;
   background: url("../images/icon_menu_dark.png") no-repeat 50%/cover;
+  text-indent: -9999px;
 }
 @media only screen and (max-width: 1024px) {
   body .wrap header .icons .menuBtn {
@@ -268,8 +276,8 @@ body .wrap .bg1 svg {
 }
 body .wrap .bg1 svg path {
   stroke: transparent;
-  animation: drowDelay 1.6s forwards;
-  animation-delay: 3s;
+  animation: drowDelay forwards;
+  animation-delay: 2.8s;
 }
 body .wrap .bg2 {
   width: 100%;
@@ -1381,7 +1389,8 @@ body.dark input,
 body.dark button,
 body.dark figcaption,
 body.dark ::placeholder,
-body.dark textarea {
+body.dark textarea,
+body.dark .des {
   color: #fff;
 }
 body.dark .wrap header h1 a {

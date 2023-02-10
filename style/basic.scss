@@ -298,7 +298,6 @@ body {
       .icons {
         margin-left: auto;
         display: flex;
-        text-indent: -9999px;
         align-items: center;
         gap: 20px;
 
@@ -306,11 +305,18 @@ body {
           padding: 0 6px 0;
         }
 
+        .des{
+          line-height: 1.1;
+          text-align: center;
+          position:relative;
+          bottom:-4px;
+        }
+
         .darkBtn {
           width: 51px;
           height: 48px;
           background: url('../images/icon_dark.png') no-repeat 50% /cover;
-
+          text-indent: -9999px;
         }
 
         .lightBtn {
@@ -318,12 +324,14 @@ body {
           height: 32px;
           background: url('../images/icon_light.png') no-repeat 0 /contain;
           display: none;
+          text-indent: -9999px;
         }
 
         .menuBtn {
           width: 37px;
           height: 30px;
           background: url('../images/icon_menu_dark.png') no-repeat 50% /cover;
+          text-indent: -9999px;
 
           @include responsiveWEB(header) {
             width: 25px;
@@ -1473,7 +1481,8 @@ body.dark {
   button,
   figcaption,
   ::placeholder,
-  textarea {
+  textarea,
+  .des {
     color: #fff;
   }
 
