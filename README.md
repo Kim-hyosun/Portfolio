@@ -19,13 +19,13 @@
 
 ---
 
-### ← (click) 폴더 구성 보기
+### 폴더 구성 보기
 
-![폴더 구성.png](Portfolio%2011abb50dd07b4b5aa348c80d7b762f9f/%25ED%258F%25B4%25EB%258D%2594_%25EA%25B5%25AC%25EC%2584%25B1.png)
+![폴더 구성.png](./common/images/%ED%8F%B4%EB%8D%94%EA%B5%AC%EC%84%B1.png)
 
-### ← (click) 코딩 컨벤션 보기
+### 코딩 컨벤션 보기
 
-![코딩컨벤션.png](Portfolio%2011abb50dd07b4b5aa348c80d7b762f9f/%25EC%25BD%2594%25EB%2594%25A9%25EC%25BB%25A8%25EB%25B2%25A4%25EC%2585%2598.png)
+![코딩컨벤션.png](./common/images/%EC%BD%94%EB%94%A9%EC%BB%A8%EB%B2%A4%EC%85%98.png)
 
 # 3. 사용 기술
 
