@@ -208,12 +208,6 @@ body .wrap header .icons {
 body .wrap header .icons a {
   padding: 0 6px 0;
 }
-body .wrap header .icons .des {
-  line-height: 1.1;
-  text-align: center;
-  position: relative;
-  bottom: -4px;
-}
 body .wrap header .icons .darkBtn {
   width: 51px;
   height: 48px;
@@ -408,6 +402,23 @@ body .wrap .bg2 svg {
     margin: 60vw 0 0 10vw;
   }
 }
+.wrap main .work .des {
+  display: inline-block;
+  font-size: 18px;
+  border: 1px solid #050505;
+  border-radius: 20px;
+  padding: 10px 6px;
+  line-height: 28px;
+  background-color: #FAE8E1;
+  position: relative;
+  z-index: 99;
+  top: -10px;
+}
+.wrap main .work .des:hover {
+  background-color: #FFA41B;
+  color: #fff;
+  border: none;
+}
 .wrap main .wrap {
   display: grid;
   grid-template-columns: repeat(3, 22vw);
@@ -502,6 +513,7 @@ body .wrap .bg2 svg {
 }
 .wrap main .wrap .item :is(.img, .pg3) .txt {
   height: 100%;
+  width: 100%;
   display: grid;
   place-items: center;
 }
@@ -509,11 +521,21 @@ body .wrap .bg2 svg {
   font-size: 2.6rem;
   font-weight: 600;
   text-transform: uppercase;
-  color: #fff;
+  color: #050505;
 }
 .wrap main .wrap .item .img {
   background-color: #ddd;
   height: 100%;
+  position: relative;
+  top: 0;
+}
+.wrap main .wrap .item .img img {
+  width: 100%;
+  height: 100%;
+}
+.wrap main .wrap .item .img .txt {
+  position: absolute;
+  top: 0;
 }
 .wrap main .wrap .item .pg {
   position: absolute;
