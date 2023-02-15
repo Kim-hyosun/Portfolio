@@ -518,22 +518,30 @@ body .wrap .bg2 svg {
   place-items: center;
 }
 .wrap main .wrap .item :is(.img, .pg3) .txt h6 {
-  font-size: 2.6rem;
+  font-size: 2rem;
   font-weight: 600;
   text-transform: uppercase;
-  color: #050505;
+  color: #fff;
 }
-.wrap main .wrap .item .img {
+.wrap main .wrap .item :is(.img, .pg3) .txt h6 span {
+  font-size: 1rem;
+  display: inline-block;
+  border: #ddd 1px solid;
+  padding: 2px;
+  margin-right: 3px;
+  border-radius: 4px;
+}
+.wrap main .wrap .item .img, .wrap main .wrap .item .pg3 {
   background-color: #ddd;
   height: 100%;
   position: relative;
   top: 0;
 }
-.wrap main .wrap .item .img img {
+.wrap main .wrap .item .img img, .wrap main .wrap .item .pg3 img {
   width: 100%;
   height: 100%;
 }
-.wrap main .wrap .item .img .txt {
+.wrap main .wrap .item .img .txt, .wrap main .wrap .item .pg3 .txt {
   position: absolute;
   top: 0;
 }

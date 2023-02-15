@@ -642,16 +642,25 @@ body {
           height: 100%; width:100%;
           display: grid;
           place-items: center; 
+        
 
           h6 {
-            font-size: 2.6rem;
+            font-size: 2rem;
             font-weight: 600;
             text-transform: uppercase;
-            color: #050505;
+            color: #fff;
+            span{
+              font-size: 1rem;
+              display: inline-block;
+              border: #ddd 1px solid;
+              padding:2px;
+              margin-right:3px;
+              border-radius: 4px;
+            }
           }
         }
 
-        .img {
+        .img, .pg3 {
           background-color: #ddd;
           height: 100%;
           position:relative;
