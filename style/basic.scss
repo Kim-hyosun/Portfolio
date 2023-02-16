@@ -640,17 +640,21 @@ body {
 
           h6 {
             font-size: 1.6rem;
-            font-weight: 600;
+            font-weight: 400;
             color: #050505;
+            // text-align: center;
             
             
             span{
-              font-size: 1rem;
+              font-size: 1.1rem;
               display: inline-block;
-               border: #050505 1px solid;
-              padding:2px;
-              margin-right:3px;
+              border: #050505 1px solid;
+              padding:4px 10px;
+              margin-right:8px;
+              margin-bottom:10px;
               border-radius: 4px;
+              background-color: #050505;
+              color:#fff;
               
             }
           }
