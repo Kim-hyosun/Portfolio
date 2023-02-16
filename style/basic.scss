@@ -541,12 +541,6 @@ body {
 
       @include responsiveWEB(mobtb) {
         margin: 60vw 0 0 10vw;
-      }
-
-      .des {
-        display: inline-block; font-size: 18px; border:1px solid #050505; border-radius: 20px; padding:18px 6px; line-height: 20px; background-color: $bgColor; position: relative; z-index: 99; top:-14px; text-align: center; font-weight: bold;
-        
-      &:hover{background-color: #FFA41B; color:#fff; border:none;}
       } 
     
     }
@@ -647,7 +641,6 @@ body {
           h6 {
             font-size: 1.6rem;
             font-weight: 600;
-            text-transform: uppercase;
             color: #050505;
             
             
@@ -1500,8 +1493,7 @@ body.dark {
   button,
   figcaption,
   ::placeholder,
-  textarea,
-  .des {
+  textarea {
     color: #fff;
   }
 

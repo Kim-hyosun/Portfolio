@@ -402,25 +402,6 @@ body .wrap .bg2 svg {
     margin: 60vw 0 0 10vw;
   }
 }
-.wrap main .work .des {
-  display: inline-block;
-  font-size: 18px;
-  border: 1px solid #050505;
-  border-radius: 20px;
-  padding: 18px 6px;
-  line-height: 20px;
-  background-color: #FAE8E1;
-  position: relative;
-  z-index: 99;
-  top: -14px;
-  text-align: center;
-  font-weight: bold;
-}
-.wrap main .work .des:hover {
-  background-color: #FFA41B;
-  color: #fff;
-  border: none;
-}
 .wrap main .wrap {
   display: grid;
   grid-template-columns: repeat(3, 22vw);
@@ -522,7 +503,6 @@ body .wrap .bg2 svg {
 .wrap main .wrap .item :is(.img, .pg3) .txt h6 {
   font-size: 1.6rem;
   font-weight: 600;
-  text-transform: uppercase;
   color: #050505;
 }
 .wrap main .wrap .item :is(.img, .pg3) .txt h6 span {
@@ -1421,8 +1401,7 @@ body.dark input,
 body.dark button,
 body.dark figcaption,
 body.dark ::placeholder,
-body.dark textarea,
-body.dark .des {
+body.dark textarea {
   color: #fff;
 }
 body.dark .wrap header h1 a {
