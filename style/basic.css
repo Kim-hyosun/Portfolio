@@ -528,10 +528,10 @@ body .wrap .bg2 svg {
 .wrap main .wrap .item :is(.img, .pg3) .txt h6 span {
   font-size: 1rem;
   display: inline-block;
-  border: #050505 1px solid;
   padding: 2px;
   margin-right: 3px;
   border-radius: 4px;
+  background-color: #eeff02;
 }
 .wrap main .wrap .item .img, .wrap main .wrap .item .pg3 {
   background-color: #ddd;
