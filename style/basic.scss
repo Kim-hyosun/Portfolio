@@ -645,18 +645,20 @@ body {
         
 
           h6 {
-            font-size: 2rem;
+            font-size: 1.6rem;
             font-weight: 600;
             text-transform: uppercase;
             color: #050505;
             
+            
             span{
               font-size: 1rem;
               display: inline-block;
+               border: #050505 1px solid;
               padding:2px;
               margin-right:3px;
               border-radius: 4px;
-              background-color: #eeff02;
+              
             }
           }
         }
@@ -699,8 +701,7 @@ body {
 
     }
   }
-}
-.wrap {
+}.wrap {
     main {
     .skills {
       margin: 12vw 0 0 10vw;

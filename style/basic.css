@@ -520,7 +520,7 @@ body .wrap .bg2 svg {
   place-items: center;
 }
 .wrap main .wrap .item :is(.img, .pg3) .txt h6 {
-  font-size: 2rem;
+  font-size: 1.6rem;
   font-weight: 600;
   text-transform: uppercase;
   color: #050505;
@@ -528,10 +528,10 @@ body .wrap .bg2 svg {
 .wrap main .wrap .item :is(.img, .pg3) .txt h6 span {
   font-size: 1rem;
   display: inline-block;
+  border: #050505 1px solid;
   padding: 2px;
   margin-right: 3px;
   border-radius: 4px;
-  background-color: #eeff02;
 }
 .wrap main .wrap .item .img, .wrap main .wrap .item .pg3 {
   background-color: #ddd;
