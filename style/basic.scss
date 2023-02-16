@@ -544,7 +544,7 @@ body {
       }
 
       .des {
-        display: inline-block; font-size: 18px; border:1px solid #050505; border-radius: 20px; padding:10px 6px; line-height: 28px; background-color: $bgColor; position: relative; z-index: 99; top:-10px;
+        display: inline-block; font-size: 18px; border:1px solid #050505; border-radius: 20px; padding:18px 6px; line-height: 20px; background-color: $bgColor; position: relative; z-index: 99; top:-10px; text-align: center; font-weight: bold;
         
       &:hover{background-color: #FFA41B; color:#fff; border:none;}
       } 
@@ -648,11 +648,12 @@ body {
             font-size: 2rem;
             font-weight: 600;
             text-transform: uppercase;
-            color: #fff;
+            color: #050505;
+            
             span{
               font-size: 1rem;
               display: inline-block;
-              border: #ddd 1px solid;
+              border: #050505 1px solid;
               padding:2px;
               margin-right:3px;
               border-radius: 4px;
