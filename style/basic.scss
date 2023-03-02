@@ -77,6 +77,7 @@ $pcSize : 1024px;
       @content;
     }
   }
+
   @else if $media ==tabpc0 {
 
     // 1400~1600
@@ -92,6 +93,7 @@ $pcSize : 1024px;
       @content;
     }
   }
+
   @else if $media ==pc3 {
 
     // 1600~1800
@@ -163,9 +165,11 @@ a {
   text-decoration: none;
   display: block;
   cursor: none;
+
   @include responsiveWEB(tab) {
     cursor: pointer;
   }
+
   @include responsiveWEB(mobtb) {
     cursor: pointer;
   }
@@ -427,6 +431,7 @@ body {
       top: 297vw;
       display: flex;
       justify-content: center;
+
       @include responsiveWEB(full) {
         top: 312vw;
       }
@@ -441,7 +446,7 @@ body {
 }
 
 .wrap {
-    main {
+  main {
 
     h2 {
       width: 90vw;
@@ -535,14 +540,15 @@ body {
       @include responsiveWEB(tab) {
         margin: 60vw 0 0 10vw;
       }
+
       @include responsiveWEB(tab1) {
         margin: 64vw 0 0 10vw;
       }
 
       @include responsiveWEB(mobtb) {
         margin: 60vw 0 0 10vw;
-      } 
-    
+      }
+
     }
 
     .wrap {
@@ -620,9 +626,11 @@ body {
           @include responsiveWEB(tab1) {
             display: none;
           }
+
           @include responsiveWEB(tab2) {
             display: none;
           }
+
           @include responsiveWEB(mobtb) {
             display: none;
           }
@@ -633,42 +641,48 @@ body {
         }
 
         :is(.img, .pg3) .txt {
-          height: 100%; width:100%;
+          height: 100%;
+          width: 100%;
           display: grid;
-          place-items: center; 
-        
+          place-items: center;
+
 
           h6 {
             font-size: 1.6rem;
             font-weight: 400;
             color: #050505;
             // text-align: center;
-            
-            
-            span{
+
+
+            span {
               font-size: 1.1rem;
               display: inline-block;
-              border: #050505 1px solid;
-              padding:4px 10px;
-              margin-right:8px;
-              margin-bottom:10px;
+              padding: 4px 10px;
+              margin-right: 8px;
+              margin-bottom: 10px;
               border-radius: 4px;
               background-color: #050505;
-              color:#fff;
-              
+              color: #fff;
             }
           }
         }
 
-        .img, .pg3 {
+        .img,
+        .pg3 {
           background-color: #ddd;
           height: 100%;
-          position:relative;
-          top:0;
-          img{width:100%; height:100%;}
-          .txt{
-            position:absolute;
-            top:0;
+          position: relative;
+          top: 0;
+
+
+          img {
+            width: 100%;
+            height: 100%;
+          }
+
+          .txt {
+            position: absolute;
+            top: 0;
           }
         }
 
@@ -691,15 +705,21 @@ body {
         }
 
         .pg3 {
-          background-color: red;
+          // background-color: red;
           transition-delay: 0.2s;
+
+          img {
+            filter: blur(4px);
+          }
         }
       }
 
     }
   }
-}.wrap {
-    main {
+}
+
+.wrap {
+  main {
     .skills {
       margin: 12vw 0 0 10vw;
 
@@ -861,6 +881,7 @@ body {
             @include responsiveWEB(tabpc3) {
               font-size: 30px;
             }
+
             @include responsiveWEB(tabpc4) {
               font-size: 30px;
             }
@@ -946,10 +967,12 @@ body {
                 left: -30px;
                 top: 0;
               }
+
               @include responsiveWEB(tab1) {
                 left: 0;
                 top: 0;
               }
+
               @include responsiveWEB(tab1) {
                 left: 0;
                 top: 0;
@@ -1003,6 +1026,7 @@ body {
     }
   }
 }
+
 .wrap {
   main {
     .about {
@@ -1011,6 +1035,7 @@ body {
       @include responsiveWEB(pc2) {
         margin: 26vw 0 0 16vw;
       }
+
       @include responsiveWEB(pc3) {
         margin: 34vw 0 0 16vw;
       }
@@ -1018,6 +1043,7 @@ body {
       @include responsiveWEB(tabpc) {
         margin: 50vw 0 0 16vw;
       }
+
       @include responsiveWEB(tabpc0) {
         margin: 36vw 0 0 16vw;
       }
@@ -1041,9 +1067,11 @@ body {
       @include responsiveWEB(tab) {
         margin: 30vw 0 0 16vw;
       }
+
       @include responsiveWEB(tab1) {
         margin: 10vw 0 0 16vw;
       }
+
       @include responsiveWEB(tab2) {
         margin: 2vw 0 0 16vw;
       }
@@ -1072,6 +1100,7 @@ body {
         @include responsiveWEB(tabpc3) {
           font-size: 20px;
         }
+
         @include responsiveWEB(tabpc4) {
           font-size: 20px;
         }
@@ -1109,6 +1138,7 @@ body {
         @include responsiveWEB(tabpc3) {
           font-size: 16px;
         }
+
         @include responsiveWEB(tabpc4) {
           font-size: 16px;
         }
@@ -1128,6 +1158,7 @@ body {
     }
   }
 }
+
 .wrap {
   main {
     .contact {
@@ -1141,6 +1172,7 @@ body {
       @include responsiveWEB(pc2) {
         margin-top: 18vw;
       }
+
       @include responsiveWEB(pc3) {
         margin-top: 16vw;
       }
@@ -1207,6 +1239,7 @@ body {
         @include responsiveWEB(tabpc3) {
           padding: 20px 40px 20px;
         }
+
         @include responsiveWEB(tabpc4) {
           padding: 20px 40px 20px;
         }
@@ -1242,7 +1275,7 @@ body {
             margin: 10px 0 0 16px;
             background-color: transparent;
             border-bottom: 1px solid #000;
-            
+
             @include responsiveWEB(tabpc) {
               font-size: 16px;
             }
@@ -1277,6 +1310,7 @@ body {
             @include responsiveWEB(tabpc3) {
               margin: 20px 0 0 20px;
             }
+
             @include responsiveWEB(tabpc4) {
               margin: 20px 0 0 20px;
             }
@@ -1314,6 +1348,7 @@ body {
             @include responsiveWEB(tabpc3) {
               margin: 20px 0 0 20px;
             }
+
             @include responsiveWEB(tabpc4) {
               margin: 20px 0 0 20px;
             }
@@ -1365,6 +1400,7 @@ body {
     @include responsiveWEB(pc2) {
       margin: 62vw 0 2vw 2vw;
     }
+
     @include responsiveWEB(pc3) {
       margin: 62vw 0 2vw 2vw;
     }
