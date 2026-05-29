@@ -37,7 +37,7 @@
   menuAbout.addEventListener('click', closeMenu);
 })();
 
-/** darkmode & lightmode — localStorage + prefers-color-scheme */
+/** darkmode & lightmode — 기본은 라이트, 사용자가 명시적으로 다크로 토글한 경우에만 다크 유지 */
 (function pageModeToggle() {
   const STORAGE_KEY = 'portfolio-theme';
   const turnOff = document.querySelector<HTMLElement>(
@@ -47,9 +47,8 @@
     'header .icons .lightBtn',
   )!;
 
-  const saved = localStorage.getItem(STORAGE_KEY);
-  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  const shouldBeDark = saved ? saved === 'dark' : prefersDark;
+  // localStorage에 'dark'가 저장돼 있을 때만 다크. 비어 있으면 OS 설정 무시하고 라이트.
+  const shouldBeDark = localStorage.getItem(STORAGE_KEY) === 'dark';
 
   if (shouldBeDark) document.body.classList.add('dark');
 
