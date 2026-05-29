@@ -1,15 +1,21 @@
 (function () {
-  const form = document.querySelector('.emailForm');
+  const form = document.querySelector<HTMLFormElement>('.emailForm');
   if (!form) return;
 
-  const sendEmail = (e) => {
+  const sendEmail = (e: SubmitEvent) => {
     e.preventDefault();
 
     if (!form.reportValidity()) return;
 
-    const NAME = document.getElementById('userName').value.trim();
-    const EMAIL = document.getElementById('userEmail').value.trim();
-    const MESSAGE = document.getElementById('message').value.trim();
+    const NAME = (
+      document.getElementById('userName') as HTMLInputElement
+    ).value.trim();
+    const EMAIL = (
+      document.getElementById('userEmail') as HTMLInputElement
+    ).value.trim();
+    const MESSAGE = (
+      document.getElementById('message') as HTMLTextAreaElement
+    ).value.trim();
 
     if (!NAME || !EMAIL || !MESSAGE) {
       alert('성함, 이메일, 메시지를 모두 입력해주세요.');
@@ -22,7 +28,7 @@
       message: MESSAGE,
     };
 
-    const btn = document.getElementById('emailBtn');
+    const btn = document.getElementById('emailBtn') as HTMLButtonElement;
     btn.disabled = true;
 
     emailjs

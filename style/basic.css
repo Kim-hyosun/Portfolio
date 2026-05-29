@@ -476,6 +476,11 @@ body .wrap .bg2 svg {
 .wrap main .wrap .item:nth-child(6) {
   grid-row: 8/15;
 }
+/* 7번째 이후 item은 그리드에 자리가 없어 자동배치되며 레이아웃이 깨지므로 숨김.
+   추후 7번째 이상도 큰 네모로 표시하고 싶다면 grid-template-rows 확장 + nth-child 추가. */
+.wrap main .wrap .item:nth-child(n + 7) {
+  display: none;
+}
 @media only screen and (min-width: 768px) and (max-width: 928px) {
   .wrap main .wrap .item:nth-child(6) {
     display: none;

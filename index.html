@@ -438,24 +438,8 @@
 		<div></div>
 	</div>
 
-	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-	<script type="text/javascript">
-		(function () {
-			emailjs.init("U1Y7l1h_pZwNrwc4F");
-		})();
-	</script>
-	<script type="text/javascript" src="./js/email.js"></script>
-	<script src="./js/index.js"></script>
-	<script src="./js/cursor.js"></script>
-	<script>
-		const loading = document.querySelector('.loading');
-		window.onload = function () {
-			setTimeout(() => {
-				loading.classList.add('remove');
-				document.body.classList.remove('noScroll');
-			}, 1400);
-		};
-	</script>
+	<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+	<script type="module" src="./js/main.ts"></script>
 </body>
 
 </html>
