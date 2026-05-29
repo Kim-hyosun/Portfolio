@@ -35,15 +35,27 @@
   })
 })();
 
-/** darkmode & lightmode */
+/** darkmode & lightmode — localStorage + prefers-color-scheme */
 (function pageModeToggle() {
+  const STORAGE_KEY = 'portfolio-theme';
   const turnOff = document.querySelector('header .icons .darkBtn');
   const turnOn = document.querySelector('header .icons .lightBtn');
-  turnOff.addEventListener('click', () => {
+
+  const saved = localStorage.getItem(STORAGE_KEY);
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const shouldBeDark = saved ? saved === 'dark' : prefersDark;
+
+  if (shouldBeDark) document.body.classList.add('dark');
+
+  turnOff.addEventListener('click', (e) => {
+    e.preventDefault();
     document.body.classList.add('dark');
+    localStorage.setItem(STORAGE_KEY, 'dark');
   })
-  turnOn.addEventListener('click', () => {
+  turnOn.addEventListener('click', (e) => {
+    e.preventDefault();
     document.body.classList.remove('dark');
+    localStorage.setItem(STORAGE_KEY, 'light');
   })
 })();
 
@@ -59,8 +71,6 @@
 
   path1.style.strokeDasharray = pathLength1;
   path1.style.strokeDashoffset = calcDashoffset((window.innerHeight - wrap1.offsetTop), wrap1, pathLength1);
-  // console.log(wrap1.offsetTop)
-  console.log(window.scrollY)
 
   path2.style.strokeDasharray = pathLength2;
   path2.style.strokeDashoffset = calcDashoffset(window.innerHeight, wrap2, pathLength2);
@@ -71,15 +81,18 @@
     return value < 0 ? 0 : value > length ? length : value;
   }
 
+  let ticking = false;
   window.addEventListener('scroll', () => {
-    const scrollY1 = window.scrollY + (window.innerHeight * 0.6);
-    path1.style.strokeDashoffset = calcDashoffset(scrollY1, wrap1, pathLength1);
-  })
-
-  window.addEventListener('scroll', () => {
-    const scrollY2 = window.scrollY + (window.innerHeight * 0.7);
-    path2.style.strokeDashoffset = calcDashoffset(scrollY2, wrap2, pathLength2);
-  })
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(() => {
+      const scrollY1 = window.scrollY + (window.innerHeight * 0.6);
+      const scrollY2 = window.scrollY + (window.innerHeight * 0.7);
+      path1.style.strokeDashoffset = calcDashoffset(scrollY1, wrap1, pathLength1);
+      path2.style.strokeDashoffset = calcDashoffset(scrollY2, wrap2, pathLength2);
+      ticking = false;
+    });
+  }, { passive: true });
 })();
 
 /** main drowing path animation */
@@ -88,5 +101,3 @@
   const mainPathlength = mainPath.getTotalLength();
   mainPath.style.setProperty('--length', mainPathlength)
 })();
-
-
